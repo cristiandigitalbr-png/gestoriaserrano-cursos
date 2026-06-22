@@ -360,7 +360,7 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
     <div class="areas-grid">
       <div class="area-card reveal"><div class="area-icon">📋</div><h3>Administrativa</h3><p>Capacitación para tareas administrativas, gestión documental y organización empresarial.</p><button onclick="abrirModal('modalAdministrativa')" class="btn-card">Ver cursos</button></div>
       <div class="area-card reveal"><div class="area-icon">🗂️</div><h3>Gestoría y Secretariados</h3><p>Formación práctica para desempeñarse en gestorías, oficinas y áreas administrativas.</p><button onclick="abrirModal('modalGestoria')" class="btn-card">Ver cursos</button></div>
-      <div class="area-card reveal"><div class="area-icon">✨</div><h3>Belleza</h3><p>Cursos orientados al cuidado personal, estética y servicios de belleza.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
+      <div class="area-card reveal"><div class="area-icon">✨</div><h3>Belleza</h3><p>Cursos orientados al cuidado personal, estética y servicios de belleza.</p><button onclick="abrirModal('modalBelleza')" class="btn-card">Ver cursos</button></div>
       <div class="area-card reveal"><div class="area-icon">📚</div><h3>Educación</h3><p>Capacitación para el desarrollo de habilidades educativas y de acompañamiento.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
       <div class="area-card reveal"><div class="area-icon">🌿</div><h3>Salud y Terapias</h3><p>Formación vinculada al bienestar, la salud y diferentes terapias complementarias.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
       <div class="area-card reveal"><div class="area-icon">🚀</div><h3>Emprendedor</h3><p>Herramientas para iniciar, desarrollar y potenciar proyectos propios.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
@@ -1590,6 +1590,279 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Secretariado%20Administrativo" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 1: LISTADO CURSOS BELLEZA -->
+<div class="modal-overlay" id="modalBelleza">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalBelleza')">✕</button>
+      <h2>Belleza</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleManicura')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Manicura</h3>
+        <p>Uñas acrílicas, gel, manicura rusa, esmaltado semipermanente, arte 3D, incrustaciones y más.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleMaqInfantil')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Maquillaje Infantil</h3>
+        <p>Animales, personajes, flores, brillos y disfraces. Ideal para eventos, cumpleaños y salida laboral rentable.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE MANICURA -->
+<div class="modal-overlay" id="detalleManicura">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleManicura')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleManicura','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Manicura</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Forma profesionales sólidamente capacitados en la atención de manicuría, tratamiento de manos y uñas esculpidas. Aprenderás anatomía de las manos y uñas, así como las afecciones que pueden presentarse, para brindar un servicio de calidad y cuidado.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Lista de materiales</div>
+          <div class="tema-item">Manicuría en uñas</div>
+          <div class="tema-item">Uñas acrílicas y en gel</div>
+          <div class="tema-item">Cómo hacer flores</div>
+          <div class="tema-item">Arte de tela</div>
+          <div class="tema-item">Estructural 3D</div>
+          <div class="tema-item">Incrustaciones en gel</div>
+          <div class="tema-item">Incrustaciones acrílicas</div>
+          <div class="tema-item">Pintado · Rosas de acrílico</div>
+          <div class="tema-item">Técnica naturaleza muerta</div>
+          <div class="tema-item">Uñas con aerografía</div>
+          <div class="tema-item">Uñas escultoradas 3D</div>
+          <div class="tema-item">Uñas acrílicas · Aplicación de uñas</div>
+          <div class="tema-item">Cómo quitar uñas</div>
+          <div class="tema-item">Manicuría rusa</div>
+          <div class="tema-item">Esmaltado semipermanente · Cómo remover esmalte</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Manicura" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE MAQUILLAJE INFANTIL -->
+<div class="modal-overlay" id="detalleMaqInfantil">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleMaqInfantil')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleMaqInfantil','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Maquillaje Infantil</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Aprenderás a crear animales, personajes terroríficos, flores, brillos, personajes de ciencia ficción y diseños muy especiales. Ideal para quien desea maquillar a los niños de su entorno o generar una salida laboral muy rentable en eventos, cumpleaños y fiestas. Conocerás todos los elementos necesarios para crear maquillajes infantiles y disfraces.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Lo que vas a aprender</div>
+        <div class="temas-grid">
+          <div class="tema-item">Materiales y elementos para maquillaje infantil</div>
+          <div class="tema-item">Creación de animales en el rostro</div>
+          <div class="tema-item">Personajes terroríficos y de ciencia ficción</div>
+          <div class="tema-item">Flores, brillos y diseños especiales</div>
+          <div class="tema-item">Disfraces y personajes simpáticos</div>
+          <div class="tema-item">Técnicas aplicadas a distintos tipos de rostros infantiles</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Maquillaje%20Infantil" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE DEPILACIÓN TRADICIONAL -->
+<div class="modal-overlay" id="detalleDepilacion">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleDepilacion')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleDepilacion','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Depilación Tradicional</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en técnicas clásicas de depilación para brindar un servicio profesional, seguro e higiénico. Al finalizar, estarás preparado para trabajar en salones de belleza, spas y centros de estética.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Depilación Tradicional</div>
+        <div class="temas-grid">
+          <div class="tema-item">Historia y evolución de la depilación</div>
+          <div class="tema-item">Tipos: cera, hilo, pinzas y otras técnicas</div>
+          <div class="tema-item">Beneficios, durabilidad y accesibilidad</div>
+          <div class="tema-item">El rol del depilador/a en salones y centros de belleza</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Anatomía de la Piel y el Vello</div>
+        <div class="temas-grid">
+          <div class="tema-item">Estructura de la piel: capas y funciones</div>
+          <div class="tema-item">Ciclo de crecimiento del vello: anagen, catagen, telogen</div>
+          <div class="tema-item">Tipos de vello: fino, grueso, rizado</div>
+          <div class="tema-item">Cómo reconocer distintos tipos de piel: sensible, seca, grasa, mixta</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Técnicas de Depilación con Cera</div>
+        <div class="temas-grid">
+          <div class="tema-item">Tipos de cera: caliente, tibia y fría</div>
+          <div class="tema-item">Preparación de la piel y selección de cera</div>
+          <div class="tema-item">Técnicas de aplicación: espátulas y bandas depilatorias</div>
+          <div class="tema-item">Zonas del cuerpo: piernas, axilas, bikini, rostro</div>
+          <div class="tema-item">Precauciones: temperatura, quemaduras y lesiones</div>
+          <div class="tema-item">Eliminación de cera sobrante y productos post-depilatorios</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Depilaci%C3%B3n%20Tradicional" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE PEINADOS PARA EVENTOS -->
+<div class="modal-overlay" id="detallePeinados">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detallePeinados')">✕</button>
+      <button class="modal-back" onclick="volverLista('detallePeinados','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Peinados para Eventos</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Te prepara para aprender los conocimientos específicos, tipos de peinados, recogidos y técnicas especiales para que puedas resolver peinados para todo tipo de eventos de manera creativa y profesional.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Temas a desarrollar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Preparación del cabello: productos y herramientas correctas</div>
+          <div class="tema-item">Manejo de buclera y plancha para ondas y rulos duraderos</div>
+          <div class="tema-item">Varios estilos de trenzas</div>
+          <div class="tema-item">Peinados recogidos elegantes y descontracturados</div>
+          <div class="tema-item">Peinados semirecogidos</div>
+          <div class="tema-item">Estilos de coletas y peinados colmena</div>
+          <div class="tema-item">Aplicación de tiaras, coronas y tocados</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Peinados%20para%20Eventos" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE CEJAS Y PESTAÑAS -->
+<div class="modal-overlay" id="detalleCejasPestanas">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleCejasPestanas')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleCejasPestanas','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Cejas y Pestañas</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Uno de los cursos más buscados por sus maravillosas técnicas y rápida salida laboral. Tendrás todas las herramientas con la última actualización en aplicación de pestañas lifting y todo lo más usado por los clientes de todo el mundo.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Materiales que se utilizan</div>
+          <div class="tema-item">Planchado de cejas</div>
+          <div class="tema-item">Rizado de pestañas</div>
+          <div class="tema-item">Belleza en general</div>
+          <div class="tema-item">Cejas: preparación, limpieza y diseño</div>
+          <div class="tema-item">Colocación de la extensión</div>
+          <div class="tema-item">Pestañas postizas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Cejas%20y%20Pesta%C3%B1as" target="_blank" class="modal-cta">Quiero inscribirme</a>
     </div>
   </div>
 </div>
