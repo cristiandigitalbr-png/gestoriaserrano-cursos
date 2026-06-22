@@ -361,10 +361,10 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
       <div class="area-card reveal"><div class="area-icon">📋</div><h3>Administrativa</h3><p>Capacitación para tareas administrativas, gestión documental y organización empresarial.</p><button onclick="abrirModal('modalAdministrativa')" class="btn-card">Ver cursos</button></div>
       <div class="area-card reveal"><div class="area-icon">🗂️</div><h3>Gestoría y Secretariados</h3><p>Formación práctica para desempeñarse en gestorías, oficinas y áreas administrativas.</p><button onclick="abrirModal('modalGestoria')" class="btn-card">Ver cursos</button></div>
       <div class="area-card reveal"><div class="area-icon">✨</div><h3>Belleza</h3><p>Cursos orientados al cuidado personal, estética y servicios de belleza.</p><button onclick="abrirModal('modalBelleza')" class="btn-card">Ver cursos</button></div>
-      <div class="area-card reveal"><div class="area-icon">📚</div><h3>Educación</h3><p>Capacitación para el desarrollo de habilidades educativas y de acompañamiento.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
-      <div class="area-card reveal"><div class="area-icon">🌿</div><h3>Salud y Terapias</h3><p>Formación vinculada al bienestar, la salud y diferentes terapias complementarias.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
-      <div class="area-card reveal"><div class="area-icon">🚀</div><h3>Emprendedor</h3><p>Herramientas para iniciar, desarrollar y potenciar proyectos propios.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
-      <div class="area-card reveal"><div class="area-icon">💻</div><h3>Digital</h3><p>Capacitación en herramientas digitales, tecnología y habilidades para el mundo actual.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
+      <div class="area-card reveal"><div class="area-icon">📚</div><h3>Educación</h3><p>Capacitación para el desarrollo de habilidades educativas y de acompañamiento.</p><button onclick="abrirModal('modalEducacion')" class="btn-card">Ver cursos</button></div>
+      <div class="area-card reveal"><div class="area-icon">🌿</div><h3>Salud y Terapias</h3><p>Formación vinculada al bienestar, la salud y diferentes terapias complementarias.</p><button onclick="abrirModal('modalSalud')" class="btn-card">Ver cursos</button></div>
+      <div class="area-card reveal"><div class="area-icon">🚀</div><h3>Emprendedor</h3><p>Herramientas para iniciar, desarrollar y potenciar proyectos propios.</p><button onclick="abrirModal('modalEmprendedor')" class="btn-card">Ver cursos</button></div>
+      <div class="area-card reveal"><div class="area-icon">💻</div><h3>Digital</h3><p>Capacitación en herramientas digitales, tecnología y habilidades para el mundo actual.</p><button onclick="abrirModal('modalDigital')" class="btn-card">Ver cursos</button></div>
     </div>
   </div>
 </section>
@@ -1618,12 +1618,189 @@ document.addEventListener('DOMContentLoaded', function() {
         <p>Animales, personajes, flores, brillos y disfraces. Ideal para eventos, cumpleaños y salida laboral rentable.</p>
         <div class="curso-preview-arrow">Ver detalle →</div>
       </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detallePedicuria')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Pedicuría</h3>
+        <p>Desde técnicas básicas de cuidado del pie hasta spa, decoración y salida laboral. Formación completa en 4 módulos.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 4 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleMaqProfesional')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Maquillaje Profesional</h3>
+        <p>Desde preparación de la piel hasta maquillaje para novias y quinceañeras. Formación completa en 4 módulos con salida laboral.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
       <!-- PRÓXIMOS CURSOS -->
       <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
         <div class="curso-preview-badge">Próximamente</div>
         <h3>Nuevo curso</h3>
         <p>Próximamente habrá más cursos disponibles en esta área.</p>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE MAQUILLAJE PROFESIONAL -->
+<div class="modal-overlay" id="detalleMaqProfesional">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleMaqProfesional')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleMaqProfesional','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Maquillaje Profesional</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación completa en 4 módulos que te lleva desde los fundamentos del maquillaje y la preparación de la piel hasta técnicas avanzadas para eventos, novias y quinceañeras. Ideal para quienes buscan una salida laboral sólida como maquilladora profesional.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción y Preparación de la Piel</div>
+        <div class="temas-grid">
+          <div class="tema-item">Historia y conceptos básicos del maquillaje</div>
+          <div class="tema-item">Herramientas y productos esenciales</div>
+          <div class="tema-item">Higiene y bioseguridad</div>
+          <div class="tema-item">Tipos de piel y diagnóstico</div>
+          <div class="tema-item">Preparación de la piel antes del maquillaje</div>
+          <div class="tema-item">Correctores y prebases</div>
+          <div class="tema-item">Teoría del color aplicada al maquillaje</div>
+          <div class="tema-item">Corrección de imperfecciones</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Técnicas de Maquillaje Social</div>
+        <div class="temas-grid">
+          <div class="tema-item">Aplicación de bases y elección de tonos</div>
+          <div class="tema-item">Contorno e iluminación</div>
+          <div class="tema-item">Sellado y fijación del maquillaje</div>
+          <div class="tema-item">Diseño y perfilado de cejas</div>
+          <div class="tema-item">Técnicas básicas de maquillaje de ojos</div>
+          <div class="tema-item">Aplicación de sombras y delineados</div>
+          <div class="tema-item">Máscara de pestañas y pestañas postizas</div>
+          <div class="tema-item">Maquillaje social de día</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Eventos y Tendencias</div>
+        <div class="temas-grid">
+          <div class="tema-item">Maquillaje social de noche</div>
+          <div class="tema-item">Técnicas de smokey eyes</div>
+          <div class="tema-item">Maquillaje para fiestas y eventos especiales</div>
+          <div class="tema-item">Tendencias actuales en maquillaje</div>
+          <div class="tema-item">Técnicas de iluminación avanzada</div>
+          <div class="tema-item">Maquillaje para fotografía y redes sociales</div>
+          <div class="tema-item">Combinación de colores según ocasión</div>
+          <div class="tema-item">Prácticas integrales</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Maquillaje Profesional y Salida Laboral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Maquillaje para novias</div>
+          <div class="tema-item">Maquillaje para quinceañeras</div>
+          <div class="tema-item">Maquillaje para madrinas e invitadas</div>
+          <div class="tema-item">Armado del kit profesional</div>
+          <div class="tema-item">Atención y asesoramiento al cliente</div>
+          <div class="tema-item">Presupuestos y costos de servicios</div>
+          <div class="tema-item">Fotografía de trabajos realizados</div>
+          <div class="tema-item">Redes sociales para maquilladoras</div>
+          <div class="tema-item">Creación de portfolio profesional</div>
+          <div class="tema-item">Trabajo final integrador</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Maquillaje%20Profesional" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE PEDICURIA -->
+<div class="modal-overlay" id="detallePedicuria">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detallePedicuria')">✕</button>
+      <button class="modal-back" onclick="volverLista('detallePedicuria','modalBelleza')">← Volver a Belleza</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Pedicuría</h2>
+      <p>Área Belleza · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación completa en 4 módulos que te prepara para brindar un servicio de pedicuría profesional: desde los fundamentos de higiene y bioseguridad hasta tratamientos estéticos, spa de pies y herramientas para emprender tu propio negocio.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Pedicuría</div>
+        <div class="temas-grid">
+          <div class="tema-item">Conceptos básicos de pedicuría</div>
+          <div class="tema-item">Higiene y bioseguridad</div>
+          <div class="tema-item">Herramientas y materiales de trabajo</div>
+          <div class="tema-item">Anatomía básica del pie y las uñas</div>
+          <div class="tema-item">Protocolos de atención al cliente</div>
+          <div class="tema-item">Preparación del área de trabajo</div>
+          <div class="tema-item">Esterilización y desinfección de instrumentos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Técnicas Básicas de Pedicuría</div>
+        <div class="temas-grid">
+          <div class="tema-item">Corte y limado correcto de uñas</div>
+          <div class="tema-item">Tratamiento de cutículas</div>
+          <div class="tema-item">Eliminación de durezas superficiales</div>
+          <div class="tema-item">Exfoliación e hidratación de los pies</div>
+          <div class="tema-item">Masajes básicos de relajación</div>
+          <div class="tema-item">Aplicación de esmalte tradicional</div>
+          <div class="tema-item">Cuidados y recomendaciones para el cliente</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Pedicuría Estética y Tratamientos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Spa de pies</div>
+          <div class="tema-item">Tratamientos hidratantes y nutritivos</div>
+          <div class="tema-item">Decoración básica de uñas</div>
+          <div class="tema-item">Tendencias actuales en pedicuría</div>
+          <div class="tema-item">Combinación de colores y diseños</div>
+          <div class="tema-item">Presentación profesional del servicio</div>
+          <div class="tema-item">Prácticas integrales</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Atención Profesional y Salida Laboral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Organización del gabinete de trabajo</div>
+          <div class="tema-item">Atención y fidelización de clientes</div>
+          <div class="tema-item">Armado del kit profesional</div>
+          <div class="tema-item">Costos y presupuestos</div>
+          <div class="tema-item">Redes sociales para promocionar servicios</div>
+          <div class="tema-item">Fotografía de trabajos realizados</div>
+          <div class="tema-item">Marketing para emprendedoras</div>
+          <div class="tema-item">Trabajo final integrador</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Pedicur%C3%ADa" target="_blank" class="modal-cta">Quiero inscribirme</a>
     </div>
   </div>
 </div>
@@ -1863,6 +2040,1456 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Cejas%20y%20Pesta%C3%B1as" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 1: EDUCACIÓN -->
+<div class="modal-overlay" id="modalEducacion">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalEducacion')">✕</button>
+      <h2>Educación</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAuxJardinera')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Auxiliar de Maestra Jardinera</h3>
+        <p>Cuidado y educación de niños de 45 días a 5 años. Formación para trabajar en jardines y guarderías con certificado internacional.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detallePreceptor')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Preceptor Escolar</h3>
+        <p>Acompañamiento educativo, apoyo emocional y gestión escolar. Formación para trabajar en instituciones escolares con certificado internacional.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleTallerista')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Tallerista Escolar y Comunitario</h3>
+        <p>Planificación y coordinación de talleres en entornos educativos y comunitarios. Formación en 3 módulos con proyecto integrador final.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 4 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleOrientador')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Orientador Escolar y Vocacional</h3>
+        <p>Acompañamiento en la elección vocacional y el proyecto de vida. Formación en 3 módulos con herramientas para trabajar con estudiantes, familias e instituciones.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 5 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleDidactica')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Didáctica y Planificación Escolar</h3>
+        <p>Diseño de clases, planificación curricular, evaluación y proyectos educativos. Formación completa en 4 módulos para docentes y educadores.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DIDÁCTICA Y PLANIFICACIÓN ESCOLAR -->
+<div class="modal-overlay" id="detalleDidactica">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleDidactica')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleDidactica','modalEducacion')">← Volver a Educación</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Didáctica y Planificación Escolar</h2>
+      <p>Área Educación · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 4 módulos para dominar los fundamentos de la didáctica, la planificación educativa, la evaluación de aprendizajes y el diseño de proyectos escolares. Ideal para docentes, futuros educadores y profesionales que buscan fortalecer sus herramientas pedagógicas.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Fundamentos de la Didáctica</div>
+        <div class="temas-grid">
+          <div class="tema-item">Concepto de didáctica y su importancia en la educación</div>
+          <div class="tema-item">Rol del docente en el proceso de enseñanza-aprendizaje</div>
+          <div class="tema-item">Teorías del aprendizaje</div>
+          <div class="tema-item">Estrategias metodológicas</div>
+          <div class="tema-item">Características de una enseñanza efectiva</div>
+          <div class="tema-item">Diversidad e inclusión en el aula</div>
+          <div class="tema-item">Recursos didácticos y tecnológicos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Planificación Educativa</div>
+        <div class="temas-grid">
+          <div class="tema-item">Concepto y finalidad de la planificación escolar</div>
+          <div class="tema-item">Niveles de planificación educativa</div>
+          <div class="tema-item">Diseño de objetivos de aprendizaje</div>
+          <div class="tema-item">Selección y organización de contenidos</div>
+          <div class="tema-item">Elaboración de secuencias didácticas</div>
+          <div class="tema-item">Cronogramas y organización del tiempo escolar</div>
+          <div class="tema-item">Adaptaciones curriculares</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Evaluación y Seguimiento de los Aprendizajes</div>
+        <div class="temas-grid">
+          <div class="tema-item">Concepto y tipos de evaluación</div>
+          <div class="tema-item">Evaluación diagnóstica, formativa y sumativa</div>
+          <div class="tema-item">Instrumentos de evaluación</div>
+          <div class="tema-item">Elaboración de rúbricas y criterios de evaluación</div>
+          <div class="tema-item">Registro y seguimiento de los aprendizajes</div>
+          <div class="tema-item">Retroalimentación efectiva</div>
+          <div class="tema-item">Mejora continua de las prácticas educativas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Diseño de Proyectos Educativos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Proyectos institucionales y áulicos</div>
+          <div class="tema-item">Identificación de necesidades educativas</div>
+          <div class="tema-item">Diseño y ejecución de proyectos escolares</div>
+          <div class="tema-item">Trabajo interdisciplinario</div>
+          <div class="tema-item">Innovación educativa y uso de tecnologías</div>
+          <div class="tema-item">Presentación de propuestas pedagógicas</div>
+          <div class="tema-item">Proyecto final integrador</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Did%C3%A1ctica%20y%20Planificaci%C3%B3n%20Escolar" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE ORIENTADOR ESCOLAR Y VOCACIONAL -->
+<div class="modal-overlay" id="detalleOrientador">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleOrientador')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleOrientador','modalEducacion')">← Volver a Educación</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Orientador Escolar y Vocacional</h2>
+      <p>Área Educación · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 3 módulos para acompañar a estudiantes en su desarrollo personal, académico y profesional. Aprendés técnicas de orientación, elaboración de perfiles vocacionales y diseño de talleres para guiar a las personas en la construcción de su proyecto de vida.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Fundamentos de la Orientación</div>
+        <div class="temas-grid">
+          <div class="tema-item">Concepto y objetivos de la orientación escolar y vocacional</div>
+          <div class="tema-item">Rol y funciones del orientador</div>
+          <div class="tema-item">Desarrollo personal, académico y profesional</div>
+          <div class="tema-item">Factores que influyen en la elección vocacional</div>
+          <div class="tema-item">Etapas evolutivas y procesos de aprendizaje</div>
+          <div class="tema-item">Autoconocimiento e identificación de intereses y aptitudes</div>
+          <div class="tema-item">Habilidades de comunicación y acompañamiento</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Técnicas y Herramientas de Orientación</div>
+        <div class="temas-grid">
+          <div class="tema-item">Entrevista de orientación</div>
+          <div class="tema-item">Técnicas de observación y escucha activa</div>
+          <div class="tema-item">Detección de necesidades educativas y vocacionales</div>
+          <div class="tema-item">Estrategias de acompañamiento individual y grupal</div>
+          <div class="tema-item">Elaboración de actividades orientadoras</div>
+          <div class="tema-item">Trabajo con familias e instituciones educativas</div>
+          <div class="tema-item">Recursos para la búsqueda de información académica y laboral</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Proyecto de Vida e Inserción Educativa y Laboral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Construcción del proyecto de vida</div>
+          <div class="tema-item">Oferta educativa y opciones de formación superior</div>
+          <div class="tema-item">Salidas laborales y tendencias del mercado de trabajo</div>
+          <div class="tema-item">Elaboración de perfiles vocacionales</div>
+          <div class="tema-item">Planificación de objetivos personales y profesionales</div>
+          <div class="tema-item">Diseño de talleres de orientación escolar y vocacional</div>
+          <div class="tema-item">Proyecto final integrador</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Orientador%20Escolar%20y%20Vocacional" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE TALLERISTA ESCOLAR Y COMUNITARIO -->
+<div class="modal-overlay" id="detalleTallerista">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleTallerista')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleTallerista','modalEducacion')">← Volver a Educación</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Tallerista Escolar y Comunitario</h2>
+      <p>Área Educación · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 3 módulos para diseñar, planificar y coordinar talleres en espacios educativos y comunitarios. Aprendés a trabajar con grupos diversos, gestionar proyectos sociales y articular con instituciones locales para promover la participación ciudadana.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción al Rol del Tallerista</div>
+        <div class="temas-grid">
+          <div class="tema-item">Concepto y funciones del tallerista escolar y comunitario</div>
+          <div class="tema-item">Ámbitos de intervención educativa y social</div>
+          <div class="tema-item">Características de los grupos de trabajo</div>
+          <div class="tema-item">Comunicación efectiva y escucha activa</div>
+          <div class="tema-item">Liderazgo y trabajo en equipo</div>
+          <div class="tema-item">Inclusión, diversidad y participación comunitaria</div>
+          <div class="tema-item">Ética profesional y responsabilidad social</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Planificación y Desarrollo de Talleres</div>
+        <div class="temas-grid">
+          <div class="tema-item">Diseño y planificación de actividades</div>
+          <div class="tema-item">Elaboración de objetivos y contenidos</div>
+          <div class="tema-item">Técnicas participativas y dinámicas grupales</div>
+          <div class="tema-item">Recursos didácticos y materiales de apoyo</div>
+          <div class="tema-item">Estrategias para fomentar la participación</div>
+          <div class="tema-item">Resolución de conflictos dentro del grupo</div>
+          <div class="tema-item">Evaluación de actividades y resultados</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Intervención Comunitaria y Proyecto Final</div>
+        <div class="temas-grid">
+          <div class="tema-item">Identificación de necesidades de la comunidad</div>
+          <div class="tema-item">Organización de proyectos educativos y comunitarios</div>
+          <div class="tema-item">Articulación con instituciones y organizaciones locales</div>
+          <div class="tema-item">Promoción de la participación ciudadana</div>
+          <div class="tema-item">Gestión básica de proyectos sociales</div>
+          <div class="tema-item">Elaboración de propuestas de talleres comunitarios</div>
+          <div class="tema-item">Presentación y desarrollo de un proyecto integrador final</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Tallerista%20Escolar%20y%20Comunitario" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE PRECEPTOR ESCOLAR -->
+<div class="modal-overlay" id="detallePreceptor">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detallePreceptor')">✕</button>
+      <button class="modal-back" onclick="volverLista('detallePreceptor','modalEducacion')">← Volver a Educación</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Preceptor Escolar</h2>
+      <p>Área Educación · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación para profesionales del acompañamiento educativo dentro de instituciones escolares. El preceptor actúa como agente proactivo en la resolución de problemas, la organización de actividades y la atención a las necesidades individuales de los estudiantes, colaborando estrechamente con docentes y familias.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción al Rol del Preceptor</div>
+        <div class="temas-grid">
+          <div class="tema-item">¿Qué es un preceptor escolar? Definición y funciones</div>
+          <div class="tema-item">Impacto en el rendimiento académico y desarrollo social</div>
+          <div class="tema-item">Relación con el equipo docente: roles y colaboración</div>
+          <div class="tema-item">Interacción con estudiantes y familias</div>
+          <div class="tema-item">Ética profesional y confidencialidad</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Habilidades de Comunicación</div>
+        <div class="temas-grid">
+          <div class="tema-item">Escucha activa, empatía y asertividad</div>
+          <div class="tema-item">Crear vínculos de confianza y respeto con estudiantes</div>
+          <div class="tema-item">Coordinación con docentes y directivos</div>
+          <div class="tema-item">Comunicación con padres y tutores</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Desarrollo Infantil y Adolescente</div>
+        <div class="temas-grid">
+          <div class="tema-item">Hitos y necesidades del desarrollo infantil y adolescente</div>
+          <div class="tema-item">Factores que afectan el desarrollo académico y emocional</div>
+          <div class="tema-item">Identificación de necesidades educativas especiales</div>
+          <div class="tema-item">Intervención temprana ante dificultades detectadas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Estrategias para el Apoyo Académico</div>
+        <div class="temas-grid">
+          <div class="tema-item">Acompañamiento y supervisión de tareas escolares</div>
+          <div class="tema-item">Técnicas de estudio y organización para estudiantes</div>
+          <div class="tema-item">Gestión de tiempos y actividades extracurriculares</div>
+          <div class="tema-item">Diseño de programas de apoyo para estudiantes con dificultades</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Preceptor%20Escolar" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE AUXILIAR DE MAESTRA JARDINERA -->
+<div class="modal-overlay" id="detalleAuxJardinera">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAuxJardinera')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAuxJardinera','modalEducacion')">← Volver a Educación</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Auxiliar de Maestra Jardinera</h2>
+      <p>Área Educación · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación para llevar a cabo las tareas de cuidado integral y enseñanza de niños de 45 días a 5 años en jardines y guarderías. Trabajarás en equipo con el cuerpo docente para el cumplimiento de objetivos pedagógicos y didácticos. Una rápida salida laboral con buen ingreso económico.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Lo que vas a aprender</div>
+        <div class="temas-grid">
+          <div class="tema-item">Desarrollo infantil: etapas físicas, emocionales, sociales y cognitivas</div>
+          <div class="tema-item">Técnicas de enseñanza y actividades adecuadas por edad</div>
+          <div class="tema-item">Gestión del aula y planificación de actividades</div>
+          <div class="tema-item">Primeros auxilios y protocolos de seguridad</div>
+          <div class="tema-item">Comunicación con padres y tutores</div>
+          <div class="tema-item">Organigrama, jerarquía y rol social del jardín</div>
+          <div class="tema-item">Confección de carpetas, planillas y protocolos</div>
+          <div class="tema-item">Psicología evolutiva del niño y del lactante</div>
+          <div class="tema-item">Desarrollo intelectual, psicosexual y del lenguaje</div>
+          <div class="tema-item">Técnicas de higiene</div>
+          <div class="tema-item">Expresión grafoplástica y lectocomprensión</div>
+          <div class="tema-item">Iniciación musical, juego y motricidad</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Auxiliar%20de%20Maestra%20Jardinera" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 1: SALUD Y TERAPIAS -->
+<div class="modal-overlay" id="modalSalud">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalSalud')">✕</button>
+      <h2>Salud y Terapias</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAcompTerapeutico')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Acompañante Terapéutico</h3>
+        <p>Formación para acompañar a personas en su cotidianeidad dentro de equipos terapéuticos. Trabaja con niños, adultos, adultos mayores en instituciones de salud o de forma particular.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAuxFarmacia')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Auxiliar en Farmacia</h3>
+        <p>Farmacología, atención al cliente, gestión de stock y administración. Ideal para trabajar en farmacias o complementar experiencia laboral con formación académica.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleEnfermeriaGeriatrica')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Auxiliar en Enfermería Geriátrica</h3>
+        <p>Cuidado integral del adulto mayor: gerontología, patologías frecuentes, primeros auxilios y salida laboral en domicilios, residencias y centros de día.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 4 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAsistenteGerontologia')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Asistente en Gerontología</h3>
+        <p>Acompañamiento integral del adulto mayor: atención física, emocional, estimulación cognitiva e intervención socioeducativa. Formación en 5 módulos con salida laboral.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 5 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleEducacionSalud')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Educación para la Salud y Hábitos Saludables</h3>
+        <p>Promoción del bienestar físico y mental, alimentación, actividad física y construcción de hábitos saludables. Formación en 2 módulos con proyecto final.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE EDUCACIÓN PARA LA SALUD Y HÁBITOS SALUDABLES -->
+<div class="modal-overlay" id="detalleEducacionSalud">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleEducacionSalud')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleEducacionSalud','modalSalud')">← Volver a Salud y Terapias</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Educación para la Salud y Hábitos Saludables</h2>
+      <p>Área Salud y Terapias · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 2 módulos para comprender el concepto integral de salud y desarrollar estrategias para incorporar hábitos saludables en la vida cotidiana. Incluye un proyecto final donde diseñás tu propio plan personal de hábitos saludables.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Fundamentos de la Salud y el Bienestar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Concepto integral de salud y bienestar</div>
+          <div class="tema-item">Factores que influyen en la salud física y mental</div>
+          <div class="tema-item">Promoción y prevención de la salud</div>
+          <div class="tema-item">Alimentación saludable y nutrición básica</div>
+          <div class="tema-item">Importancia de la hidratación</div>
+          <div class="tema-item">Actividad física y sus beneficios</div>
+          <div class="tema-item">Descanso, sueño y recuperación</div>
+          <div class="tema-item">Manejo del estrés y autocuidado</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Construcción de Hábitos Saludables</div>
+        <div class="temas-grid">
+          <div class="tema-item">¿Qué son los hábitos y cómo se forman?</div>
+          <div class="tema-item">Estrategias para incorporar hábitos saludables</div>
+          <div class="tema-item">Prevención de conductas de riesgo</div>
+          <div class="tema-item">Salud emocional y bienestar psicológico</div>
+          <div class="tema-item">Organización del tiempo y rutinas saludables</div>
+          <div class="tema-item">Salud en el ámbito familiar, escolar y laboral</div>
+          <div class="tema-item">Educación para la salud en la comunidad</div>
+          <div class="tema-item">Proyecto final: diseño de un plan personal de hábitos saludables</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Educaci%C3%B3n%20para%20la%20Salud%20y%20H%C3%A1bitos%20Saludables" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE ASISTENTE EN GERONTOLOGÍA -->
+<div class="modal-overlay" id="detalleAsistenteGerontologia">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAsistenteGerontologia')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAsistenteGerontologia','modalSalud')">← Volver a Salud y Terapias</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Asistente en Gerontología</h2>
+      <p>Área Salud y Terapias · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 5 módulos para la atención integral del adulto mayor desde un enfoque físico, emocional y social. Aprendés a acompañar, estimular y promover la autonomía de las personas mayores, con herramientas para desempeñarte en residencias geriátricas, centros de día o atención domiciliaria.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Gerontología</div>
+        <div class="temas-grid">
+          <div class="tema-item">Conceptos fundamentales de gerontología y geriatría</div>
+          <div class="tema-item">El proceso de envejecimiento humano</div>
+          <div class="tema-item">Cambios biológicos, psicológicos y sociales en la vejez</div>
+          <div class="tema-item">Calidad de vida y envejecimiento activo</div>
+          <div class="tema-item">Derechos de las personas mayores</div>
+          <div class="tema-item">Rol y funciones del asistente en gerontología</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Atención Integral del Adulto Mayor</div>
+        <div class="temas-grid">
+          <div class="tema-item">Necesidades físicas, emocionales y sociales</div>
+          <div class="tema-item">Comunicación y acompañamiento</div>
+          <div class="tema-item">Promoción de la autonomía e independencia</div>
+          <div class="tema-item">Actividades de estimulación y recreación</div>
+          <div class="tema-item">Prevención del aislamiento social</div>
+          <div class="tema-item">Trabajo con familias y cuidadores</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Salud y Cuidados Básicos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Hábitos saludables en la tercera edad</div>
+          <div class="tema-item">Alimentación e hidratación</div>
+          <div class="tema-item">Higiene y confort</div>
+          <div class="tema-item">Movilidad y prevención de caídas</div>
+          <div class="tema-item">Patologías frecuentes en adultos mayores</div>
+          <div class="tema-item">Reconocimiento de signos de alerta</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Intervención Socioeducativa y Recreativa</div>
+        <div class="temas-grid">
+          <div class="tema-item">Diseño de actividades recreativas y ocupacionales</div>
+          <div class="tema-item">Estimulación cognitiva y memoria</div>
+          <div class="tema-item">Talleres y dinámicas grupales</div>
+          <div class="tema-item">Integración comunitaria</div>
+          <div class="tema-item">Promoción de vínculos saludables</div>
+          <div class="tema-item">Inclusión social del adulto mayor</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 5 · Práctica Profesional y Salida Laboral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Ámbitos de desempeño profesional</div>
+          <div class="tema-item">Residencias geriátricas, centros de día y atención domiciliaria</div>
+          <div class="tema-item">Ética y responsabilidad profesional</div>
+          <div class="tema-item">Elaboración de registros e informes básicos</div>
+          <div class="tema-item">Trabajo interdisciplinario</div>
+          <div class="tema-item">Proyecto final integrador y evaluación</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Asistente%20en%20Gerontolog%C3%ADa" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE AUXILIAR EN ENFERMERÍA GERIÁTRICA -->
+<div class="modal-overlay" id="detalleEnfermeriaGeriatrica">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleEnfermeriaGeriatrica')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleEnfermeriaGeriatrica','modalSalud')">← Volver a Salud y Terapias</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Auxiliar en Enfermería Geriátrica</h2>
+      <p>Área Salud y Terapias · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación completa en 5 módulos para el cuidado integral del adulto mayor. Aprendés desde los fundamentos de gerontología hasta la inserción laboral en domicilios, residencias geriátricas y centros de día, con herramientas prácticas para brindar un cuidado humanizado y profesional.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Gerontología y al Cuidado del Adulto Mayor</div>
+        <div class="temas-grid">
+          <div class="tema-item">Conceptos básicos de gerontología y geriatría</div>
+          <div class="tema-item">Envejecimiento: cambios físicos, psicológicos y sociales</div>
+          <div class="tema-item">Rol del auxiliar en enfermería geriátrica</div>
+          <div class="tema-item">Derechos y calidad de vida de las personas mayores</div>
+          <div class="tema-item">Ética profesional y trato humanizado</div>
+          <div class="tema-item">Comunicación efectiva con el adulto mayor y su familia</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Cuidados Básicos de Enfermería</div>
+        <div class="temas-grid">
+          <div class="tema-item">Higiene y confort del paciente</div>
+          <div class="tema-item">Movilización y traslado seguro</div>
+          <div class="tema-item">Control de signos vitales</div>
+          <div class="tema-item">Administración de medicamentos (aspectos generales)</div>
+          <div class="tema-item">Prevención de úlceras por presión</div>
+          <div class="tema-item">Alimentación e hidratación del adulto mayor</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Patologías Frecuentes en la Vejez</div>
+        <div class="temas-grid">
+          <div class="tema-item">Enfermedades cardiovasculares</div>
+          <div class="tema-item">Diabetes e hipertensión arterial</div>
+          <div class="tema-item">Demencias y enfermedad de Alzheimer</div>
+          <div class="tema-item">Parkinson y trastornos neurológicos</div>
+          <div class="tema-item">Osteoporosis y problemas de movilidad</div>
+          <div class="tema-item">Detección de signos de alerta y derivación</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Primeros Auxilios y Atención Integral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Principios básicos de primeros auxilios</div>
+          <div class="tema-item">Actuación ante caídas y accidentes domésticos</div>
+          <div class="tema-item">Emergencias frecuentes en adultos mayores</div>
+          <div class="tema-item">Prevención de riesgos en el hogar y residencias</div>
+          <div class="tema-item">Contención emocional y acompañamiento</div>
+          <div class="tema-item">Trabajo interdisciplinario en el cuidado geriátrico</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 5 · Práctica Profesional y Salida Laboral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Organización de tareas de cuidado diario</div>
+          <div class="tema-item">Elaboración de registros y seguimiento del paciente</div>
+          <div class="tema-item">Relación con familiares y equipo de salud</div>
+          <div class="tema-item">Inserción laboral en domicilios, residencias y centros de día</div>
+          <div class="tema-item">Responsabilidades y límites de la función</div>
+          <div class="tema-item">Caso práctico integrador y evaluación final</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Auxiliar%20en%20Enfermer%C3%ADa%20Geri%C3%A1trica" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE AUXILIAR EN FARMACIA -->
+<div class="modal-overlay" id="detalleAuxFarmacia">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAuxFarmacia')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAuxFarmacia','modalSalud')">← Volver a Salud y Terapias</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Auxiliar en Farmacia</h2>
+      <p>Área Salud y Terapias · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Curso destinado al público en general y a personas que trabajan en farmacias y desean complementar su experiencia laboral con formación académica de primer nivel. Aprendés desde farmacología y atención al cliente hasta administración, primeros auxilios y bioseguridad.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Aspectos generales de Anatomía y Fisiología</div>
+          <div class="tema-item">Atención en farmacia: estructura, equipamiento y sistema de gestión</div>
+          <div class="tema-item">Medicamentos genéricos</div>
+          <div class="tema-item">Farmacología y artículos de venta en farmacias</div>
+          <div class="tema-item">Gestión de stock y control de vencimientos</div>
+          <div class="tema-item">Medicinas alternativas</div>
+          <div class="tema-item">Administración: ventas, cobranza, facturación, notas de crédito/débito, remitos y recibos</div>
+          <div class="tema-item">Primeros auxilios</div>
+          <div class="tema-item">Signos vitales</div>
+          <div class="tema-item">Normas de bioseguridad</div>
+          <div class="tema-item">Elaboración de currículum vitae y entrevista laboral</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Auxiliar%20en%20Farmacia" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE ACOMPAÑANTE TERAPÉUTICO -->
+<div class="modal-overlay" id="detalleAcompTerapeutico">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAcompTerapeutico')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAcompTerapeutico','modalSalud')">← Volver a Salud y Terapias</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Acompañante Terapéutico</h2>
+      <p>Área Salud y Terapias · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>El Acompañante Terapéutico trabaja como miembro de un equipo terapéutico en situaciones de adicciones, trastornos alimentarios, discapacidad, cuidados paliativos, acompañamiento escolar y psicosis, entre otras. El curso capacita para acompañar a la persona en su cotidianeidad, consolidándose como una herramienta eficaz dentro de cualquier equipo terapéutico.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Ámbito de trabajo</div>
+        <div class="temas-grid">
+          <div class="tema-item">Instituciones de salud privadas y oficiales</div>
+          <div class="tema-item">Internación clínica y hospitales de día</div>
+          <div class="tema-item">Instituciones psicopedagógicas y de rehabilitación</div>
+          <div class="tema-item">Internación domiciliaria y tratamientos ambulatorios</div>
+          <div class="tema-item">Niños, adolescentes, adultos y adultos mayores</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Psicología general y evolutiva</div>
+          <div class="tema-item">Psicopatología y psicofarmacología</div>
+          <div class="tema-item">Acompañamiento en niños, adolescentes, adultos y tercera edad</div>
+          <div class="tema-item">Adicciones, psicosis y discapacidad</div>
+          <div class="tema-item">Familia y acompañamiento terapéutico</div>
+          <div class="tema-item">Ética del acompañamiento terapéutico</div>
+          <div class="tema-item">Realización de informes</div>
+          <div class="tema-item">Casos clínicos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Acompa%C3%B1ante%20Terap%C3%A9utico" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 1: EMPRENDEDOR -->
+<div class="modal-overlay" id="modalEmprendedor">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalEmprendedor')">✕</button>
+      <h2>Emprendedor</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleVelas')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Velas Artesanales</h3>
+        <p>Elaboración de velas, fanales, candelabros y productos aromáticos. Ideal para emprender desde casa con un rubro creativo y rentable.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleFotografia')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Fotografía Inicial</h3>
+        <p>Cámara, tipos de lentes, enfoques y técnicas para fotografía de día, noche y fiestas. Formación técnica y creativa para emprender en fotografía.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detallePinturaTelas')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Pintura sobre Telas</h3>
+        <p>Teoría del color, materiales, técnicas y transferencia de diseños para decorar trajes, accesorios, cuadros y piezas de tela de forma creativa y artística.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 4 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleDecoracion')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Decoración de Interiores</h3>
+        <p>Diseño funcional y decorativo de espacios interiores. Color, iluminación, texturas, estilos y tendencias actuales. Ideal para emprender como decoradora de interiores.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 5 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleGlobos')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Decoración con Globos</h3>
+        <p>Arcos, guirnaldas, columnas y ambientaciones temáticas para eventos. Formación en 4 módulos con salida laboral y proyecto final integrador.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 6 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleSalones')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Decoración de Salones</h3>
+        <p>Ambientación profesional para bodas, cumpleaños, baby showers y eventos corporativos. Formación completa en 6 módulos con proyecto final integrador.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 7 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleTortas')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Decoración de Tortas</h3>
+        <p>Coberturas, fondant, modelado de figuras y tortas temáticas. Formación en 4 módulos con herramientas para emprender en pastelería decorativa.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DECORACIÓN DE TORTAS -->
+<div class="modal-overlay" id="detalleTortas">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleTortas')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleTortas','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Decoración de Tortas</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 4 módulos que va desde los fundamentos de la pastelería decorativa hasta técnicas avanzadas con fondant y modelado de figuras. Incluye herramientas de emprendimiento para lanzar tu propio negocio de tortas temáticas.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Pastelería Decorativa</div>
+        <div class="temas-grid">
+          <div class="tema-item">Herramientas y materiales básicos</div>
+          <div class="tema-item">Normas de higiene y manipulación de alimentos</div>
+          <div class="tema-item">Tipos de tortas y rellenos más utilizados</div>
+          <div class="tema-item">Nivelación, corte y armado de tortas</div>
+          <div class="tema-item">Coberturas básicas: crema, ganache y buttercream</div>
+          <div class="tema-item">Conservación y transporte de productos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Técnicas de Decoración Básicas</div>
+        <div class="temas-grid">
+          <div class="tema-item">Uso correcto de mangas y boquillas</div>
+          <div class="tema-item">Decoraciones con crema y buttercream</div>
+          <div class="tema-item">Aplicación de bordes y terminaciones</div>
+          <div class="tema-item">Técnicas de alisado profesional</div>
+          <div class="tema-item">Decoración con sprinkles y accesorios comestibles</div>
+          <div class="tema-item">Diseño de tortas temáticas simples</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Decoración Avanzada y Tortas Temáticas</div>
+        <div class="temas-grid">
+          <div class="tema-item">Introducción al fondant</div>
+          <div class="tema-item">Forrado de tortas con fondant</div>
+          <div class="tema-item">Modelado básico de figuras</div>
+          <div class="tema-item">Flores y detalles decorativos</div>
+          <div class="tema-item">Tortas para cumpleaños, bautismos y eventos especiales</div>
+          <div class="tema-item">Combinación de colores y tendencias actuales</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Emprendimiento y Proyecto Final</div>
+        <div class="temas-grid">
+          <div class="tema-item">Cálculo de costos y presupuestos</div>
+          <div class="tema-item">Presentación profesional del producto</div>
+          <div class="tema-item">Fotografía de tortas para redes sociales</div>
+          <div class="tema-item">Marketing y ventas para emprendedores</div>
+          <div class="tema-item">Atención al cliente y toma de pedidos</div>
+          <div class="tema-item">Proyecto final: diseño y decoración integral de una torta temática</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Decoraci%C3%B3n%20de%20Tortas" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DECORACIÓN DE SALONES -->
+<div class="modal-overlay" id="detalleSalones">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleSalones')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleSalones','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Decoración de Salones</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación completa en 6 módulos para diseñar, planificar y montar decoraciones profesionales para todo tipo de eventos sociales y corporativos. Incluye herramientas de emprendimiento, marketing y un proyecto final donde diseñás un salón completo.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Decoración de Eventos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Conceptos básicos de decoración y ambientación</div>
+          <div class="tema-item">Tipos de eventos sociales y corporativos</div>
+          <div class="tema-item">Tendencias actuales en decoración</div>
+          <div class="tema-item">Teoría del color aplicada a eventos</div>
+          <div class="tema-item">Distribución y aprovechamiento de espacios</div>
+          <div class="tema-item">Herramientas y materiales básicos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Diseño y Planificación de Eventos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Planificación integral de la decoración</div>
+          <div class="tema-item">Elaboración de propuestas temáticas</div>
+          <div class="tema-item">Presupuestos y organización de recursos</div>
+          <div class="tema-item">Selección de mobiliario y accesorios</div>
+          <div class="tema-item">Cronogramas de montaje y desmontaje</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Decoración con Telas, Luces y Centros de Mesa</div>
+        <div class="temas-grid">
+          <div class="tema-item">Uso de telas y cortinados decorativos</div>
+          <div class="tema-item">Iluminación ambiental y decorativa</div>
+          <div class="tema-item">Diseño de centros de mesa</div>
+          <div class="tema-item">Combinación de elementos decorativos</div>
+          <div class="tema-item">Montaje de espacios destacados</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Ambientación para Diferentes Eventos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Decoración para cumpleaños</div>
+          <div class="tema-item">Decoración para bodas y aniversarios</div>
+          <div class="tema-item">Baby shower y eventos infantiles</div>
+          <div class="tema-item">Eventos empresariales y académicos</div>
+          <div class="tema-item">Decoraciones temáticas y personalizadas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 5 · Montaje Profesional y Coordinación</div>
+        <div class="temas-grid">
+          <div class="tema-item">Técnicas de montaje seguro</div>
+          <div class="tema-item">Organización del equipo de trabajo</div>
+          <div class="tema-item">Resolución de imprevistos</div>
+          <div class="tema-item">Atención al cliente</div>
+          <div class="tema-item">Supervisión y control de calidad del evento</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 6 · Emprendimiento y Proyecto Final</div>
+        <div class="temas-grid">
+          <div class="tema-item">Cómo iniciar un emprendimiento de decoración</div>
+          <div class="tema-item">Costos, presupuestos y rentabilidad</div>
+          <div class="tema-item">Marketing y redes sociales para decoradores</div>
+          <div class="tema-item">Fotografía profesional de trabajos realizados</div>
+          <div class="tema-item">Armado de portfolio</div>
+          <div class="tema-item">Proyecto final: diseño completo de un salón para un evento</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Decoraci%C3%B3n%20de%20Salones" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DECORACIÓN CON GLOBOS -->
+<div class="modal-overlay" id="detalleGlobos">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleGlobos')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleGlobos','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Decoración con Globos</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 4 módulos para dominar las técnicas de decoración con globos y convertirlo en un emprendimiento rentable. Desde las bases y estructuras hasta decoraciones temáticas para bodas, baby showers y eventos corporativos, con herramientas de gestión y un proyecto final integrador.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Decoración con Globos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Historia y evolución de la decoración con globos</div>
+          <div class="tema-item">Tipos de globos y materiales complementarios</div>
+          <div class="tema-item">Herramientas básicas de trabajo</div>
+          <div class="tema-item">Técnicas de inflado manual y con inflador eléctrico</div>
+          <div class="tema-item">Nudos, uniones y medidas</div>
+          <div class="tema-item">Combinación de colores y tendencias actuales</div>
+          <div class="tema-item">Seguridad y conservación de los materiales</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Técnicas y Estructuras Básicas</div>
+        <div class="temas-grid">
+          <div class="tema-item">Armado de racimos y bases</div>
+          <div class="tema-item">Guirnaldas orgánicas</div>
+          <div class="tema-item">Columnas decorativas</div>
+          <div class="tema-item">Arcos tradicionales y orgánicos</div>
+          <div class="tema-item">Centros de mesa con globos</div>
+          <div class="tema-item">Decoración para cumpleaños y eventos infantiles</div>
+          <div class="tema-item">Prácticas guiadas de montaje</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Decoraciones Temáticas y Eventos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Decoración para baby shower</div>
+          <div class="tema-item">Decoración para bodas y aniversarios</div>
+          <div class="tema-item">Ambientación de eventos corporativos</div>
+          <div class="tema-item">Uso de globos metalizados y personalizados</div>
+          <div class="tema-item">Combinación con telas, flores y accesorios</div>
+          <div class="tema-item">Diseño de fondos para fotografías</div>
+          <div class="tema-item">Presupuestación de trabajos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Emprendimiento y Proyecto Final</div>
+        <div class="temas-grid">
+          <div class="tema-item">Organización de un servicio de decoración</div>
+          <div class="tema-item">Atención al cliente y toma de pedidos</div>
+          <div class="tema-item">Costos, presupuestos y rentabilidad</div>
+          <div class="tema-item">Redes sociales para promocionar servicios</div>
+          <div class="tema-item">Fotografía y presentación de trabajos</div>
+          <div class="tema-item">Armado de portfolio profesional</div>
+          <div class="tema-item">Proyecto final: diseño y montaje de una decoración completa</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Decoraci%C3%B3n%20con%20Globos" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DECORACIÓN DE INTERIORES -->
+<div class="modal-overlay" id="detalleDecoracion">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleDecoracion')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleDecoracion','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Decoración de Interiores</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Curso orientado a capacitar para diseñar y resolver de manera funcional y decorativa espacios interiores, considerando las características del espacio y las necesidades del cliente. Aprendés las herramientas de diseño (color, iluminación y texturas), los estilos y tendencias actuales, y técnicas de comunicación visual para presentar propuestas.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Introducción al diseño y decoración de espacios interiores</div>
+          <div class="tema-item">El espacio</div>
+          <div class="tema-item">El usuario</div>
+          <div class="tema-item">Herramientas de diseño: color, iluminación y texturas</div>
+          <div class="tema-item">Estilos y tendencias actuales en la decoración</div>
+          <div class="tema-item">Comunicación visual y técnicas de representación</div>
+          <div class="tema-item">Diseño sustentable</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Decoraci%C3%B3n%20de%20Interiores" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE PINTURA SOBRE TELAS -->
+<div class="modal-overlay" id="detallePinturaTelas">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detallePinturaTelas')">✕</button>
+      <button class="modal-back" onclick="volverLista('detallePinturaTelas','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Pintura sobre Telas</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Aprendés los tips básicos para iniciarte como especialista en pintura sobre tela. Ideal para decorar trajes, lencería, accesorios, cuadros o cualquier pieza de tela de forma creativa, original y artística. Incluye teoría del color y manejo de materiales.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Teoría de luz y sombra</div>
+          <div class="tema-item">Conociendo el material para pintar en tela</div>
+          <div class="tema-item">Teoría del color para pintar en tela</div>
+          <div class="tema-item">Cómo mantener limpios los pinceles</div>
+          <div class="tema-item">Uso del diluyente de pintura y acuarela silk de Acrilex</div>
+          <div class="tema-item">Empleo de pinturas dimensionales cuando están secas</div>
+          <div class="tema-item">Cómo transferir un diseño desde la web para pintar</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Pintura%20sobre%20Telas" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE FOTOGRAFÍA INICIAL -->
+<div class="modal-overlay" id="detalleFotografia">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleFotografia')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleFotografia','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Fotografía Inicial</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Estudiar Fotografía significa desarrollar una actividad creativa, profesional y económica que exige tanto conocimientos técnicos y dominio de la imagen como capacidad expresiva y comunicacional. Ideal para quien quiere iniciarse en la fotografía y convertirla en una salida laboral.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Cámara</div>
+          <div class="tema-item">Herramientas</div>
+          <div class="tema-item">Tipos de fotografía</div>
+          <div class="tema-item">Enfoques</div>
+          <div class="tema-item">Tipos de lentes</div>
+          <div class="tema-item">Fotografía de noche</div>
+          <div class="tema-item">Fotografía de fiestas</div>
+          <div class="tema-item">Fotografía de día</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Fotograf%C3%ADa%20Inicial" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE VELAS ARTESANALES -->
+<div class="modal-overlay" id="detalleVelas">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleVelas')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleVelas','modalEmprendedor')">← Volver a Emprendedor</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Velas Artesanales</h2>
+      <p>Área Emprendedor · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Aprendés a hacer velas y fanales con un recorrido paso a paso por el proceso de elaboración artesanal. Incluye trucos, consejos y recomendaciones para fabricar tus propios productos y emprender desde casa con un rubro creativo y rentable.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Aromaterapia</div>
+          <div class="tema-item">Aceites esenciales</div>
+          <div class="tema-item">Elaboración de candelabros</div>
+          <div class="tema-item">Elaboración de faroles</div>
+          <div class="tema-item">Elaboración de lámparas</div>
+          <div class="tema-item">Elaboración de sales</div>
+          <div class="tema-item">Inciensos: introducción y uso</div>
+          <div class="tema-item">Elaboración de velas artesanales</div>
+          <div class="tema-item">Velas con cera de abejas</div>
+          <div class="tema-item">Velas con cera de soja</div>
+          <div class="tema-item">Decoración de velas</div>
+          <div class="tema-item">Velas de soja</div>
+          <div class="tema-item">Velas de boda</div>
+          <div class="tema-item">Velas florales</div>
+          <div class="tema-item">Velas decorativas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Velas%20Artesanales" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 1: DIGITAL -->
+<div class="modal-overlay" id="modalDigital">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalDigital')">✕</button>
+      <h2>Digital</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleCommunityManager')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Community Manager</h3>
+        <p>Gestión profesional de redes sociales, estrategia de contenidos, copywriting y cómo armar tu negocio como CM. Formación en 8 módulos.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleDisenoGrafico')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Diseño Gráfico</h3>
+        <p>Fundamentos del diseño, composición, tipografía, psicología del color y programas de edición. Ideal para crear identidades de marca y contenidos visuales.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleCanva')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Diseño Gráfico con Canva</h3>
+        <p>Diseño para redes sociales, material publicitario y branding con Canva. Formación en 4 módulos con proyecto final de identidad visual completa.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DISEÑO GRÁFICO CON CANVA -->
+<div class="modal-overlay" id="detalleCanva">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleCanva')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleCanva','modalDigital')">← Volver a Digital</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Diseño Gráfico con Canva</h2>
+      <p>Área Digital · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 4 módulos para dominar Canva y crear diseños profesionales para redes sociales, material publicitario y branding. Incluye un proyecto final donde desarrollás la identidad visual completa de una marca real o ficticia.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción al Diseño Gráfico y Canva</div>
+        <div class="temas-grid">
+          <div class="tema-item">Principios básicos del diseño gráfico</div>
+          <div class="tema-item">Introducción a Canva y sus herramientas</div>
+          <div class="tema-item">Creación y configuración de una cuenta</div>
+          <div class="tema-item">Interfaz y panel de trabajo</div>
+          <div class="tema-item">Tipografía y uso de fuentes</div>
+          <div class="tema-item">Teoría del color aplicada al diseño</div>
+          <div class="tema-item">Uso de plantillas y elementos gráficos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Diseño para Redes Sociales</div>
+        <div class="temas-grid">
+          <div class="tema-item">Diseño de publicaciones para Instagram y Facebook</div>
+          <div class="tema-item">Creación de historias y reels visuales</div>
+          <div class="tema-item">Portadas y banners para redes sociales</div>
+          <div class="tema-item">Uso estratégico de imágenes y textos</div>
+          <div class="tema-item">Diseño de contenido para emprendedores y negocios</div>
+          <div class="tema-item">Adaptación de diseños a diferentes formatos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Diseño de Material Publicitario</div>
+        <div class="temas-grid">
+          <div class="tema-item">Creación de flyers y folletos</div>
+          <div class="tema-item">Diseño de tarjetas personales</div>
+          <div class="tema-item">Catálogos y presentaciones comerciales</div>
+          <div class="tema-item">Diseño de logos básicos</div>
+          <div class="tema-item">Material promocional para eventos y campañas</div>
+          <div class="tema-item">Exportación e impresión de archivos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Branding y Proyecto Final</div>
+        <div class="temas-grid">
+          <div class="tema-item">Introducción al branding y la identidad visual</div>
+          <div class="tema-item">Creación de una imagen de marca</div>
+          <div class="tema-item">Paleta de colores y manual básico de estilo</div>
+          <div class="tema-item">Organización de contenido visual</div>
+          <div class="tema-item">Uso de Canva para clientes y emprendimientos</div>
+          <div class="tema-item">Armado de portfolio profesional</div>
+          <div class="tema-item">Proyecto final: identidad visual completa para una marca</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Dise%C3%B1o%20Gr%C3%A1fico%20con%20Canva" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE DISEÑO GRÁFICO -->
+<div class="modal-overlay" id="detalleDisenoGrafico">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleDisenoGrafico')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleDisenoGrafico','modalDigital')">← Volver a Digital</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Diseño Gráfico</h2>
+      <p>Área Digital · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Aprendés los fundamentos del dibujo y sus aplicaciones en el diseño digital para crear comunicaciones visuales dirigidas a grupos específicos. Incluye composición, tipografía, psicología del color y manejo de programas de edición. Dirigido a cualquier persona interesada en la edición de imágenes y contenidos visuales, sin conocimientos previos avanzados.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Lo que vas a aprender</div>
+        <div class="temas-grid">
+          <div class="tema-item">Nociones científicas del diseño gráfico</div>
+          <div class="tema-item">Objeto de estudio de la disciplina</div>
+          <div class="tema-item">Composición, tipografía y tipos de letras</div>
+          <div class="tema-item">Fundamentos de la psicología del color</div>
+          <div class="tema-item">Aplicación del color adecuado</div>
+          <div class="tema-item">Fundamentos de la publicidad</div>
+          <div class="tema-item">Creatividad y programas de edición</div>
+          <div class="tema-item">Identidad de marca: logotipos y paletas de colores</div>
+          <div class="tema-item">Interfaces de usuario en aplicaciones y sitios web</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Dise%C3%B1o%20Gr%C3%A1fico" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE COMMUNITY MANAGER -->
+<div class="modal-overlay" id="detalleCommunityManager">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleCommunityManager')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleCommunityManager','modalDigital')">← Volver a Digital</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Community Manager</h2>
+      <p>Área Digital · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Formación en 8 módulos para gestionar redes sociales de forma profesional y desempeñarte en áreas de comunicación, marketing y publicidad. Aprendés a armar estrategias de Social Media, hacer campañas digitales, actuar en crisis y medir el éxito de un negocio online.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Módulo 1: ¿Por qué Community Manager?</div>
+          <div class="tema-item">Módulo 2: Los primeros pasos · Relación con el cliente</div>
+          <div class="tema-item">Módulo 3: Cómo armar el calendario de contenidos · Trello</div>
+          <div class="tema-item">Módulo 4: Estrategia y creación de contenido</div>
+          <div class="tema-item">Módulo 5: Instagram Stories</div>
+          <div class="tema-item">Módulo 6: Copywriting y Storytelling</div>
+          <div class="tema-item">Módulo 7: El día a día del CM · Propuestas, presupuestos y portfolio</div>
+          <div class="tema-item">Módulo 8: Comenzá tu negocio como CM + ejercicio práctico</div>
+          <div class="tema-item">Actualización: Cómo calcular el valor/hora de tu trabajo</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Community%20Manager" target="_blank" class="modal-cta">Quiero inscribirme</a>
     </div>
   </div>
 </div>
