@@ -359,7 +359,7 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
     </div>
     <div class="areas-grid">
       <div class="area-card reveal"><div class="area-icon">📋</div><h3>Administrativa</h3><p>Capacitación para tareas administrativas, gestión documental y organización empresarial.</p><button onclick="abrirModal('modalAdministrativa')" class="btn-card">Ver cursos</button></div>
-      <div class="area-card reveal"><div class="area-icon">🗂️</div><h3>Gestoría y Secretariados</h3><p>Formación práctica para desempeñarse en gestorías, oficinas y áreas administrativas.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
+      <div class="area-card reveal"><div class="area-icon">🗂️</div><h3>Gestoría y Secretariados</h3><p>Formación práctica para desempeñarse en gestorías, oficinas y áreas administrativas.</p><button onclick="abrirModal('modalGestoria')" class="btn-card">Ver cursos</button></div>
       <div class="area-card reveal"><div class="area-icon">✨</div><h3>Belleza</h3><p>Cursos orientados al cuidado personal, estética y servicios de belleza.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
       <div class="area-card reveal"><div class="area-icon">📚</div><h3>Educación</h3><p>Capacitación para el desarrollo de habilidades educativas y de acompañamiento.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
       <div class="area-card reveal"><div class="area-icon">🌿</div><h3>Salud y Terapias</h3><p>Formación vinculada al bienestar, la salud y diferentes terapias complementarias.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
@@ -526,6 +526,48 @@ document.addEventListener('DOMContentLoaded', function() {
         <p>Dominá Microsoft Excel desde cero: funciones, tablas dinámicas, gráficos y más. Ideal para administración, contabilidad y ventas.</p>
         <div class="curso-preview-arrow">Ver detalle →</div>
       </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAdminEmpresas')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Administración de Empresas</h3>
+        <p>Economía, organizaciones, procesos, recursos humanos, liderazgo y herramientas de gestión empresarial.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 4 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAsistenteContable')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Asistente Contable, Impositivo y Laboral</h3>
+        <p>Impuestos, contabilidad, leyes laborales, liquidación de sueldos, AFIP y más. Formación integral para el área contable.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 5 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleConsorcios')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Administración de Consorcios</h3>
+        <p>Gestión legal, financiera y operativa de comunidades de propietarios. Expensas, asambleas, mantenimiento y resolución de conflictos.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 6 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAgropecuaria')">
+        <div class="curso-preview-badge">Online · Clases Grabadas</div>
+        <h3>Administración Agropecuaria</h3>
+        <p>Margen bruto agrícola y ganadero, facturación, AFIP, Excel agropecuario y gestión de establecimientos rurales.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 7 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAsesorComercial')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Asesor Administrativo y Comercial</h3>
+        <p>5 módulos: administración, ventas, contabilidad, marketing digital y emprendedorismo. Formación integral para el mundo empresarial.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 8 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleMonotributo')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Monotributo y ARCA</h3>
+        <p>Inscripción, categorías, facturación electrónica, recategorización y gestión operativa en la plataforma ARCA.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
       <!-- PRÓXIMOS CURSOS (placeholder) -->
       <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
         <div class="curso-preview-badge">Próximamente</div>
@@ -629,6 +671,925 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
       <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Excel" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE ADMINISTRACIÓN DE EMPRESAS -->
+<div class="modal-overlay" id="detalleAdminEmpresas">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAdminEmpresas')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAdminEmpresas','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Administración de Empresas</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>El curso abarca temas como economía, organizaciones, empresas, administración, contabilidad, mercado, consumidor, procesos, recursos humanos y comunicación. Proporciona conocimientos esenciales para comprender y gestionar eficientemente las actividades empresariales, con foco en planificar, organizar, dirigir y controlar recursos hacia el desarrollo de las organizaciones.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Temas a desarrollar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Tipos y componentes de la empresa</div>
+          <div class="tema-item">Áreas, estructura e interacción: enfoque sistémico</div>
+          <div class="tema-item">Proceso administrativo: planificar, organizar, dirigir y controlar</div>
+          <div class="tema-item">Análisis FODA · Misión · Visión</div>
+          <div class="tema-item">Liderazgo, motivación y toma de decisiones</div>
+          <div class="tema-item">Control: fases e indicadores</div>
+          <div class="tema-item">Cultura organizacional</div>
+          <div class="tema-item">Proceso de cambio y resistencia al cambio</div>
+          <div class="tema-item">Habilidades gerenciales: liderazgo y manejo de crisis</div>
+          <div class="tema-item">Herramientas de gestión: diagramas de flujo</div>
+          <div class="tema-item">Sistemas de información: ERP, WMS, CRM</div>
+          <div class="tema-item">Habilidades directivas y pensamiento estratégico</div>
+          <div class="tema-item">Tipos de liderazgo · Sostenible vs. sustentable</div>
+          <div class="tema-item">Trabajo en equipo · Contexto e incertidumbre</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Administraci%C3%B3n%20de%20Empresas" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE ASISTENTE CONTABLE IMPOSITIVO Y LABORAL -->
+<div class="modal-overlay" id="detalleAsistenteContable">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAsistenteContable')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAsistenteContable','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Asistente Contable, Impositivo y Laboral</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>El/la egresado/a tendrá conocimientos sobre el concepto de empresa, liquidación de impuestos y cálculos financieros. También sobre contabilidad y transformación de datos en información contable. Por último, adquirirá conocimientos en leyes laborales, inscripciones en organismos, conformación de legajos, remuneraciones, cargas sociales, leyes sociales, recibos de sueldo y ANSES.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Administración y organización: definición e importancia</div>
+          <div class="tema-item">Creación de empresas</div>
+          <div class="tema-item">Monotributo: inscripción y recategorización</div>
+          <div class="tema-item">Liquidación de IVA · Retenciones y percepciones</div>
+          <div class="tema-item">Impuesto provincial IIBB · Impuesto municipal DRI</div>
+          <div class="tema-item">Declaraciones juradas anuales y DDJJ</div>
+          <div class="tema-item">La contabilidad como lenguaje · Normas contables</div>
+          <div class="tema-item">Libros comerciales</div>
+          <div class="tema-item">La empresa como empleadora · Leyes laborales vigentes</div>
+          <div class="tema-item">Inscripción en AFIP, rentas provinciales y organismos de contralor</div>
+          <div class="tema-item">Inscripción en ART y Seguro de Vida Obligatorio</div>
+          <div class="tema-item">Conformación de legajos de empleados</div>
+          <div class="tema-item">Sueldos, remuneraciones y conceptos no remunerativos</div>
+          <div class="tema-item">Horas extras · Comisiones · Días no laborables · SAC</div>
+          <div class="tema-item">Cargas sociales y aportes no remunerativos</div>
+          <div class="tema-item">Liquidaciones especiales · Recibos de sueldo</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Asistente%20Contable%2C%20Impositivo%20y%20Laboral" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE ADMINISTRACIÓN DE CONSORCIOS -->
+<div class="modal-overlay" id="detalleConsorcios">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleConsorcios')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleConsorcios','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Administración de Consorcios</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Diseñado para quienes desean gestionar comunidades de propietarios en edificios residenciales, comerciales o mixtos. Al finalizar, estarás capacitado para tomar decisiones informadas, garantizar el cumplimiento de normativas, mejorar la calidad de vida de los residentes y administrar los recursos de manera efectiva.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Administración de Consorcios</div>
+        <div class="temas-grid">
+          <div class="tema-item">Definición de consorcio y propiedad horizontal</div>
+          <div class="tema-item">El rol del administrador de consorcios</div>
+          <div class="tema-item">Responsabilidades y tareas del administrador</div>
+          <div class="tema-item">Tipos de consorcios: residenciales, comerciales, mixtos</div>
+          <div class="tema-item">Importancia de una buena administración en la convivencia</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Marco Legal de los Consorcios</div>
+        <div class="temas-grid">
+          <div class="tema-item">Ley de propiedad horizontal: principios y aplicación</div>
+          <div class="tema-item">Derechos y obligaciones de los propietarios</div>
+          <div class="tema-item">Reglamento interno: creación, modificaciones y cumplimiento</div>
+          <div class="tema-item">Asambleas: convocatorias, decisiones y votaciones</div>
+          <div class="tema-item">Resolución de conflictos legales y mediación</div>
+          <div class="tema-item">Normativas de seguridad y salud en edificios</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Gestión Financiera</div>
+        <div class="temas-grid">
+          <div class="tema-item">Elaboración de presupuestos anuales</div>
+          <div class="tema-item">Cálculo de expensas comunes y extraordinarias</div>
+          <div class="tema-item">Gestión de fondos: ingresos, egresos y reservas</div>
+          <div class="tema-item">Cobranza y morosidad: estrategias de cobro</div>
+          <div class="tema-item">Auditoría financiera y transparencia en el uso de fondos</div>
+          <div class="tema-item">Planificación de mantenimiento y previsión de gastos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Gestión Operativa y Mantenimiento</div>
+        <div class="temas-grid">
+          <div class="tema-item">Mantenimiento preventivo y correctivo</div>
+          <div class="tema-item">Contratación de proveedores y negociación de contratos</div>
+          <div class="tema-item">Planificación de reparaciones y proyectos de reforma</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Administraci%C3%B3n%20de%20Consorcios" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE ADMINISTRACIÓN AGROPECUARIA -->
+<div class="modal-overlay" id="detalleAgropecuaria">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAgropecuaria')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAgropecuaria','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">Online · Clases Grabadas · Certificado Internacional</div>
+      <h2>Administración Agropecuaria</h2>
+      <p>Área Administrativa · Gestoría Serrano · ¡Últimos lugares!</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Aprendés mediante apuntes teóricos y prácticos sobre margen bruto agrícola y ganadero, gastos de estructura y principios elementales de la administración. El campo, hoy más que nunca, debe ser manejado con criterio empresarial. Este curso te da los conocimientos necesarios sobre producción, administración y negocios para afrontar los desafíos del mundo moderno.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Temas a desarrollar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Administración: principios y teorías</div>
+          <div class="tema-item">Concepto de sistemas · Calidad total</div>
+          <div class="tema-item">Medio ambiente interno y externo</div>
+          <div class="tema-item">Estructura funcional · Toma de decisiones</div>
+          <div class="tema-item">Ganadería · Reproducción · Cereal</div>
+          <div class="tema-item">Planificación · Organización · Dirección</div>
+          <div class="tema-item">Carta de porte · Facturación electrónica</div>
+          <div class="tema-item">Clientes y proveedores</div>
+          <div class="tema-item">Excel administrativo con tablas agropecuarias</div>
+          <div class="tema-item">CTG en AFIP · Clave fiscal</div>
+          <div class="tema-item">Inscripción a Monotributo</div>
+          <div class="tema-item">Planillas de carga de datos</div>
+          <div class="tema-item">Bancos: caja de ahorro y cuenta corriente</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Objetivos del curso</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🌾</span><span>Adquirir conocimientos sobre los aspectos económicos, financieros y patrimoniales en una empresa agropecuaria.</span></div>
+          <div class="info-item"><span class="info-item-icon">📊</span><span>Aprender a llevar registros propios, ordenados y útiles para tomar mejores decisiones.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏡</span><span>Realizar planificación y gestión de un establecimiento rural, aplicable en casos reales.</span></div>
+          <div class="info-item"><span class="info-item-icon">💼</span><span>Administrar y supervisar las áreas comerciales, administrativas, financieras y de personal de una empresa agropecuaria.</span></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Online con clases grabadas:</strong> Accedés al contenido en cualquier horario desde la plataforma.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Administraci%C3%B3n%20Agropecuaria" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE ASESOR ADMINISTRATIVO Y COMERCIAL -->
+<div class="modal-overlay" id="detalleAsesorComercial">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAsesorComercial')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAsesorComercial','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">5 Módulos · Certificado Internacional</div>
+      <h2>Asesor Administrativo y Comercial</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Perfil del egresado</div>
+        <p>Al finalizar, estarás preparado para trabajar en áreas administrativas, comerciales, atención al cliente, ventas, gestión documental, análisis de información y apoyo a emprendedores. También podrás brindar servicios administrativos de manera independiente.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Fundamentos de la Administración y Organización Empresarial</div>
+        <div class="temas-grid">
+          <div class="tema-item">Introducción a la administración</div>
+          <div class="tema-item">Tipos de organizaciones</div>
+          <div class="tema-item">Funciones administrativas</div>
+          <div class="tema-item">Planificación estratégica</div>
+          <div class="tema-item">Gestión del tiempo · Delegación</div>
+          <div class="tema-item">Recursos humanos y financieros</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Gestión Comercial, Ventas y Atención al Cliente</div>
+        <div class="temas-grid">
+          <div class="tema-item">Gestión comercial · Proceso de ventas</div>
+          <div class="tema-item">Venta consultiva · Negociación</div>
+          <div class="tema-item">Manejo de objeciones · Fidelización</div>
+          <div class="tema-item">Comunicación empresarial · WhatsApp Business</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Contabilidad Básica y Herramientas Informáticas</div>
+        <div class="temas-grid">
+          <div class="tema-item">Conceptos contables · Activo y pasivo</div>
+          <div class="tema-item">Costos, presupuestos y flujo de caja</div>
+          <div class="tema-item">Excel aplicado · Google Drive</div>
+          <div class="tema-item">Google Sheets · Organización digital</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Marketing Digital, Análisis de Datos y Gestión de Procesos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Marketing digital · Redes sociales</div>
+          <div class="tema-item">Creación de contenido</div>
+          <div class="tema-item">KPI e indicadores · Análisis de datos</div>
+          <div class="tema-item">Mejora continua · Gestión de calidad</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 5 · Emprendedorismo, Documentación y Plan de Negocios</div>
+        <div class="temas-grid">
+          <div class="tema-item">Perfil emprendedor · Modelo CANVAS</div>
+          <div class="tema-item">Plan de negocios</div>
+          <div class="tema-item">Contratos · Presupuestos · Cotizaciones</div>
+          <div class="tema-item">Documentación comercial · Proyecto integrador</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Asesor%20Administrativo%20y%20Comercial" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE MONOTRIBUTO Y ARCA -->
+<div class="modal-overlay" id="detalleMonotributo">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleMonotributo')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleMonotributo','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">3 Módulos · Certificado Internacional</div>
+      <h2>Monotributo y ARCA</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción al Monotributo y conceptos básicos</div>
+        <div class="temas-grid">
+          <div class="tema-item">¿Qué es el Monotributo? Ventajas y características</div>
+          <div class="tema-item">Diferencias: Monotributo, Resp. Inscripto y Relación de Dependencia</div>
+          <div class="tema-item">Requisitos para inscribirse · Actividades permitidas</div>
+          <div class="tema-item">Categorías vigentes y parámetros de facturación</div>
+          <div class="tema-item">Componentes: impuesto, jubilación y obra social</div>
+          <div class="tema-item">CUIT · Clave Fiscal · Domicilio Fiscal Electrónico</div>
+          <div class="tema-item">Alta en el régimen Monotributista</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · Gestión operativa en ARCA</div>
+        <div class="temas-grid">
+          <div class="tema-item">Conociendo la plataforma ARCA · Acceso con Clave Fiscal</div>
+          <div class="tema-item">Administración de servicios habilitados</div>
+          <div class="tema-item">Constancia de inscripción · Credencial de pago</div>
+          <div class="tema-item">Medios de pago disponibles</div>
+          <div class="tema-item">Facturación electrónica · Alta de punto de venta</div>
+          <div class="tema-item">Emisión y consulta de comprobantes electrónicos</div>
+          <div class="tema-item">Actualización de datos · Herramientas para pequeños contribuyentes</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · Recategorización, obligaciones y trámites frecuentes</div>
+        <div class="temas-grid">
+          <div class="tema-item">Recategorización semestral y parámetros</div>
+          <div class="tema-item">Modificación de datos · Baja del Monotributo</div>
+          <div class="tema-item">Monotributo Social y Monotributo Unificado</div>
+          <div class="tema-item">Exclusión y renuncia al régimen</div>
+          <div class="tema-item">Control de ingresos y facturación anual</div>
+          <div class="tema-item">Consulta de deuda · Planes de pago</div>
+          <div class="tema-item">Constancias, certificados y documentación habitual</div>
+          <div class="tema-item">Caso práctico integral de gestión en ARCA</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Monotributo%20y%20ARCA" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 1: LISTADO CURSOS GESTORÍA Y SECRETARIADOS -->
+<div class="modal-overlay" id="modalGestoria">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalGestoria')">✕</button>
+      <h2>Gestoría y Secretariados</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleGestoriaGeneral')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Gestoría Administrativa, Automotor, Previsional e Inmobiliaria</h3>
+        <p>Trámites en AFIP, rentas, automotor, inmobiliaria, previsional y comercial. Mayor salida laboral en múltiples rubros.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleGestorAutomotor')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Gestor de Trámites del Automotor</h3>
+        <p>Registración, transferencias, inscripción inicial, certificados de dominio y trámites del automotor. Ideal para trabajo independiente.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 3 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleGestorAdmin')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Gestor de Trámites Administrativos</h3>
+        <p>Trámites registrales (RPI y RPA), área impositiva (AFIP, DGR), y área previsional (SIJP, jubilaciones y pensiones).</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 4 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleCiudadaniaItaliana')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Gestor de Ciudadanía Italiana</h3>
+        <p>Ius sanguinis, línea genealógica, documentación, naturalización por matrimonio y gestión para terceros. Ideal para home office o gestorías.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 5 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleGestoriaIntegral')">
+        <div class="curso-preview-badge">6 Módulos</div>
+        <h3>Gestoría Integral Profesional</h3>
+        <p>AFIP, ANSES, automotor, migraciones, marcas, sociedades y gestión digital. Formación completa para montar tu propia gestoría.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 6 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleAsesorInmobiliario')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Asesor Inmobiliario</h3>
+        <p>Contratos, alquileres, boleto de compraventa, desalojo, práctica notarial y marco legal del mercado inmobiliario argentino.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 7 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleSecretariadoJuridico')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Secretariado Jurídico y Notarial</h3>
+        <p>Derecho procesal, práctica jurídica, derecho laboral, redacción, organización de estudio jurídico y seguimiento de expedientes.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 8 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleSecretariadoMedico')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Secretariado Médico</h3>
+        <p>Administración, comunicación, atención al cliente, redacción, informática (Word, Excel, PowerPoint) y técnicas de secretariado profesional.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 9 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleSecretariadoAdmin')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Secretariado Administrativo</h3>
+        <p>Administración, comunicación, atención al cliente, redacción, CV, entrevista laboral e informática (Word, Excel, PowerPoint).</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE GESTORÍA GENERAL -->
+<div class="modal-overlay" id="detalleGestoriaGeneral">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleGestoriaGeneral')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleGestoriaGeneral','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Gestoría Administrativa, Automotor, Previsional e Inmobiliaria</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Ideal para emprendedores y quienes quieran tener trabajo independiente, su propia oficina, sus propios clientes o mejorar sus ingresos. Cursando Gestoría General (automotor, inmobiliaria, previsional y administrativa), encontrarás mayor salida laboral que trabajando un solo rubro.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Áreas que vas a aprender</div>
+        <div class="temas-grid">
+          <div class="tema-item">Trámites relacionados con AFIP</div>
+          <div class="tema-item">Trámites en Direcciones de Rentas</div>
+          <div class="tema-item">Área automotor</div>
+          <div class="tema-item">Área inmobiliaria</div>
+          <div class="tema-item">Área previsional</div>
+          <div class="tema-item">Área comercial</div>
+        </div>
+        <p style="margin-top:14px;font-size:13px;color:var(--text-soft);font-style:italic;">En el cursado se profundizan todos los temas. La información del curso presenta los aspectos generales.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Gestor%C3%ADa%20Administrativa%2C%20Automotor%2C%20Previsional%20e%20Inmobiliaria" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE GESTOR TRÁMITES AUTOMOTOR -->
+<div class="modal-overlay" id="detalleGestorAutomotor">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleGestorAutomotor')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleGestorAutomotor','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Gestor de Trámites del Automotor</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Dirigido a quienes, con o sin conocimientos previos, se interesen en temas de registración del automotor. Estudiantes, profesionales y público en general que quieran incorporar conocimientos teórico-prácticos del quehacer diario registral, para trabajar en forma independiente o iniciar una búsqueda laboral puntual.</p>
+        <p style="margin-top:10px;font-size:13px;color:var(--bordo);font-weight:600;">⚠️ Aclaración: este curso no entrega matrícula habilitante.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">El Derecho Registral</div>
+          <div class="tema-item">La registración del automotor</div>
+          <div class="tema-item">Estado y autoridades del Sistema Registral Nacional</div>
+          <div class="tema-item">Técnicas registrales</div>
+          <div class="tema-item">Solicitudes tipo: expedición y validez</div>
+          <div class="tema-item">Verificación de los automotores</div>
+          <div class="tema-item">Licencia para configuración</div>
+          <div class="tema-item">Inscripción inicial de automotores</div>
+          <div class="tema-item">Transferencias de dominio</div>
+          <div class="tema-item">Multas por infracciones</div>
+          <div class="tema-item">Altas y bajas de carrocerías</div>
+          <div class="tema-item">Certificado de estado de dominio</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Gestor%20de%20Tr%C3%A1mites%20del%20Automotor" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE GESTOR TRÁMITES ADMINISTRATIVOS -->
+<div class="modal-overlay" id="detalleGestorAdmin">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleGestorAdmin')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleGestorAdmin','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Gestor de Trámites Administrativos</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Diseñado para personas que necesitan capacitarse en gestión de trámites. No solo adquirís conocimientos sobre las normas aplicables y los formularios utilizados, sino que aprendés a completarlos y presentarlos en cada caso particular.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Trámites Generales</div>
+        <div class="temas-grid">
+          <div class="tema-item">Tramitaciones registrales: área inmobiliaria y automotor</div>
+          <div class="tema-item">Presentación ante Registros Públicos (R.P.I. y R.P.A.)</div>
+          <div class="tema-item">Estudio de normas aplicables y formularios</div>
+          <div class="tema-item">Operatoria aplicable en cada caso</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Trámites Área Impositiva</div>
+        <div class="temas-grid">
+          <div class="tema-item">AFIP: CUIT, CUIL, altas, bajas y modificaciones de impuestos</div>
+          <div class="tema-item">Tramitaciones generales en AFIP</div>
+          <div class="tema-item">Dirección General de Rentas (DGR-ARBA)</div>
+          <div class="tema-item">Tipos de impuestos, tributos y formularios aplicables</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Trámites Área Previsional</div>
+        <div class="temas-grid">
+          <div class="tema-item">SIJP: Sistema Integrado de Jubilaciones y Pensiones</div>
+          <div class="tema-item">Reforma previsional y AFJP</div>
+          <div class="tema-item">Régimen de reparto y capitalización</div>
+          <div class="tema-item">Documentación, formularios y presentaciones ante organismos públicos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Gestor%20de%20Tr%C3%A1mites%20Administrativos" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE GESTOR CIUDADANÍA ITALIANA -->
+<div class="modal-overlay" id="detalleCiudadaniaItaliana">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleCiudadaniaItaliana')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleCiudadaniaItaliana','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Gestor de Ciudadanía Italiana</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Este curso te permite realizar el trámite paso a paso de la ciudadanía italiana, y también está diseñado para quienes buscan ofrecer este servicio a otras personas. Ideal para profesionales del derecho, asesores migratorios o cualquier persona interesada en guiar a clientes o familiares a lo largo del proceso con confianza y eficacia.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Campo laboral</div>
+        <p>Los egresados podrán trabajar de forma independiente (home office), o bien en escribanías, estudios jurídicos o gestorías.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Temas a desarrollar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Derecho a la ciudadanía: Ius sanguinis</div>
+          <div class="tema-item">Cómo generar usuario en Prenota on-line</div>
+          <div class="tema-item">Reconstrucción de la línea genealógica</div>
+          <div class="tema-item">Requisitos para descendientes de italianos</div>
+          <div class="tema-item">Documentación necesaria</div>
+          <div class="tema-item">Ciudadanía y naturalización por matrimonio</div>
+          <div class="tema-item">Hijos mayores y menores de edad · Adopciones</div>
+          <div class="tema-item">Páginas para mantener actualizada la información</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Gestor%20de%20Ciudadan%C3%ADa%20Italiana" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE GESTORÍA INTEGRAL PROFESIONAL -->
+<div class="modal-overlay" id="detalleGestoriaIntegral">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleGestoriaIntegral')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleGestoriaIntegral','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">6 Módulos · Certificado Internacional</div>
+      <h2>Gestoría Integral Profesional</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 1 · Introducción a la Gestoría y Trámites Administrativos</div>
+        <div class="temas-grid">
+          <div class="tema-item">El rol del gestor profesional · Ética y responsabilidad</div>
+          <div class="tema-item">Áreas de trabajo y oportunidades laborales</div>
+          <div class="tema-item">Atención y asesoramiento al cliente</div>
+          <div class="tema-item">Armado de expedientes · Gestión documental</div>
+          <div class="tema-item">Redacción administrativa · Notas y DDJJ</div>
+          <div class="tema-item">Organización de archivos y seguimiento de trámites</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 2 · AFIP, ARCA e Impuestos</div>
+        <div class="temas-grid">
+          <div class="tema-item">Sistema tributario argentino</div>
+          <div class="tema-item">AFIP y ARCA · Clave Fiscal</div>
+          <div class="tema-item">Monotributo · Facturación electrónica</div>
+          <div class="tema-item">IVA e Ingresos Brutos · Gestión para emprendedores</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 3 · ANSES y Seguridad Social</div>
+        <div class="temas-grid">
+          <div class="tema-item">Mi ANSES · Asignaciones familiares · AUH</div>
+          <div class="tema-item">Jubilaciones · Pensiones · Historia laboral</div>
+          <div class="tema-item">CODEM · Certificación negativa · Turnos</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 4 · Gestoría Automotor y Registral</div>
+        <div class="temas-grid">
+          <div class="tema-item">Sistema registral automotor · Transferencias</div>
+          <div class="tema-item">Formulario 08 · Verificación policial · CETA</div>
+          <div class="tema-item">Cédulas y títulos · Informes de dominio</div>
+          <div class="tema-item">Denuncias de venta · Cambio de radicación · Altas y bajas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 5 · Migraciones, Marcas y Sociedades</div>
+        <div class="temas-grid">
+          <div class="tema-item">Residencias temporarias y permanentes · Ciudadanía</div>
+          <div class="tema-item">Registro de marcas · Búsqueda de antecedentes</div>
+          <div class="tema-item">SAS · SRL · Sociedad Anónima</div>
+          <div class="tema-item">Estatutos e inscripciones</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Módulo 6 · Gestión Digital y Desarrollo Profesional</div>
+        <div class="temas-grid">
+          <div class="tema-item">TAD · Mi Argentina · AFIP · ANSES</div>
+          <div class="tema-item">Firma digital · Digitalización documental</div>
+          <div class="tema-item">Honorarios · Marketing para gestores</div>
+          <div class="tema-item">Redes sociales · Administración de gestorías</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Gestor%C3%ADa%20Integral%20Profesional" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE ASESOR INMOBILIARIO -->
+<div class="modal-overlay" id="detalleAsesorInmobiliario">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleAsesorInmobiliario')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleAsesorInmobiliario','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Asesor Inmobiliario</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Orientado a la asesoría en inmobiliaria, alquileres y escribanía. Prioriza el conocimiento de la dinámica del proceso comercial mediante casos reales y análisis general de la parte legal del mercado inmobiliario argentino, desde la A a la Z, para insertar al participante en un ámbito laboral con certeras perspectivas de futuro.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Obligaciones</div>
+          <div class="tema-item">Contratos y Principios Rectores del Nuevo Código Unificado 2015</div>
+          <div class="tema-item">Boleto de Compraventa en el Código Unificado</div>
+          <div class="tema-item">Locación de Cosas · Alquiler</div>
+          <div class="tema-item">Exégesis de un Contrato de Alquiler</div>
+          <div class="tema-item">Convenio de Desalojo</div>
+          <div class="tema-item">Conclusión del Alquiler</div>
+          <div class="tema-item">Temática Notarial y Práctica de Escribanía</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Asesor%20Inmobiliario" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE SECRETARIADO JURÍDICO Y NOTARIAL -->
+<div class="modal-overlay" id="detalleSecretariadoJuridico">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleSecretariadoJuridico')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleSecretariadoJuridico','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Secretariado Jurídico y Notarial</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Dirigido a personas que desean adquirir las principales nociones sobre el funcionamiento de estudios jurídicos y notariales, incluyendo comunicación, derecho procesal, práctica jurídica y organización documental.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Principios generales de la administración · Teoría de la información y comunicación</div>
+          <div class="tema-item">Comunicación escrita · Redacción de textos</div>
+          <div class="tema-item">Comunicación oral · Atención telefónica</div>
+          <div class="tema-item">Derecho y práctica jurídica I: Derecho, normas y organización de la justicia nacional</div>
+          <div class="tema-item">Derecho procesal: principios, derechos, etapas y elementos</div>
+          <div class="tema-item">Demanda · Citación del demandado · Pruebas</div>
+          <div class="tema-item">Derecho y práctica jurídica II: resoluciones judiciales, tipos y recursos</div>
+          <div class="tema-item">Medidas · Sentencias · Transacción · Conciliación · Caducidad</div>
+          <div class="tema-item">Derecho Laboral: principios, contratos, modalidades y deberes</div>
+          <div class="tema-item">Indemnización</div>
+          <div class="tema-item">Organización del estudio jurídico · Control de expedientes</div>
+          <div class="tema-item">Carpetas · Archivos · Personal · Primeros Auxilios</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Secretariado%20Jur%C3%ADdico%20y%20Notarial" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE SECRETARIADO MÉDICO -->
+<div class="modal-overlay" id="detalleSecretariadoMedico">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleSecretariadoMedico')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleSecretariadoMedico','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Secretariado Médico</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>El curso proporciona una visión global del funcionamiento de la empresa y el dominio de las herramientas necesarias para realizar el trabajo administrativo con profesionalidad. Al finalizar, estarás preparado para trabajar en cualquier ambiente que requiera de un/a secretario/a utilizando herramientas tecnológicas.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Rol y función · Perfil profesional</div>
+          <div class="tema-item">Introducción a la administración</div>
+          <div class="tema-item">Funciones del proceso administrativo: organización, división de trabajo y delegación</div>
+          <div class="tema-item">Gestión de la formación y capacitación de recursos humanos</div>
+          <div class="tema-item">Teoría de la información y la comunicación</div>
+          <div class="tema-item">Comunicación escrita: redacción de textos administrativos y documentos comerciales</div>
+          <div class="tema-item">Comunicación verbal · Atención telefónica</div>
+          <div class="tema-item">Atención al cliente y técnicas de ventas</div>
+          <div class="tema-item">Elaboración de Curriculum Vitae y entrevista laboral</div>
+          <div class="tema-item">Informática: Windows · Word · Excel · PowerPoint · Internet</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Secretariado%20M%C3%A9dico" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL NIVEL 2: DETALLE SECRETARIADO ADMINISTRATIVO -->
+<div class="modal-overlay" id="detalleSecretariadoAdmin">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleSecretariadoAdmin')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleSecretariadoAdmin','modalGestoria')">← Volver a Gestoría y Secretariados</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Secretariado Administrativo</h2>
+      <p>Área Gestoría y Secretariados · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Proporciona una visión global del funcionamiento de la empresa y el dominio de las herramientas necesarias para realizar el trabajo administrativo con profesionalidad. Al finalizar, estarás preparado para trabajar en cualquier ambiente que requiera de un/a secretario/a utilizando herramientas tecnológicas.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Temas a desarrollar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Rol y función · Perfil profesional</div>
+          <div class="tema-item">Introducción a la administración</div>
+          <div class="tema-item">Funciones del proceso administrativo: organización, división de trabajo y delegación</div>
+          <div class="tema-item">Gestión de formación y capacitación de recursos humanos</div>
+          <div class="tema-item">Teoría de la información y la comunicación</div>
+          <div class="tema-item">Comunicación escrita: redacción de textos administrativos y documentos comerciales</div>
+          <div class="tema-item">Comunicación verbal · Atención telefónica</div>
+          <div class="tema-item">Atención al cliente y técnicas de ventas</div>
+          <div class="tema-item">Redacción de textos administrativos</div>
+          <div class="tema-item">Elaboración de Curriculum Vitae y entrevista laboral</div>
+          <div class="tema-item">Informática: Windows · Word · Excel · PowerPoint · Internet</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Secretariado%20Administrativo" target="_blank" class="modal-cta">Quiero inscribirme</a>
     </div>
   </div>
 </div>
