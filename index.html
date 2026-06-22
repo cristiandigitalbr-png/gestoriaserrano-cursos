@@ -178,6 +178,86 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
 /* Remove old footer styles that conflict */
 .footer-inner, .footer-brand, .footer-col, .footer-bottom, .footer-socials, .footer-logo, .footer-contact, .footer-contact-item { all: unset; }
 
+
+/* MODAL */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--cream); border-radius: 10px;
+  max-width: 680px; width: 100%;
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+}
+.modal-header {
+  background: linear-gradient(135deg, var(--bordo-deep), var(--bordo));
+  padding: 36px 36px 28px; border-radius: 10px 10px 0 0;
+  position: sticky; top: 0; z-index: 2;
+}
+.modal-badge {
+  display: inline-block; background: var(--gold); color: var(--bordo-deep);
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
+}
+.modal-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 3vw, 28px); font-weight: 700;
+  color: var(--white); line-height: 1.25; margin-bottom: 8px;
+}
+.modal-header p { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 1px; text-transform: uppercase; }
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(255,255,255,0.15); border: none; cursor: pointer;
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); font-size: 18px; transition: background 0.2s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.3); }
+.modal-body { padding: 32px 36px; }
+.modal-section { margin-bottom: 28px; }
+.modal-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 700; color: var(--bordo);
+  margin-bottom: 14px; padding-bottom: 8px;
+  border-bottom: 2px solid rgba(122,0,25,0.12);
+}
+.modal-section p { font-size: 15px; line-height: 1.8; color: var(--text-soft); }
+.temas-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+}
+.tema-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 13px; line-height: 1.5; color: var(--text-dark);
+  padding: 8px 10px; background: var(--white);
+  border-radius: 6px; border-left: 3px solid var(--bordo);
+}
+.tema-item::before { content: '✓'; color: var(--bordo); font-weight: 700; flex-shrink: 0; }
+.info-items { display: flex; flex-direction: column; gap: 10px; }
+.info-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--white); border-radius: 8px; padding: 14px 16px;
+  border: 1px solid rgba(122,0,25,0.08); font-size: 14px; color: var(--text-dark); line-height: 1.6;
+}
+.info-item-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.modal-cta {
+  display: block; text-align: center;
+  background: var(--gold); color: var(--bordo-deep);
+  padding: 16px 32px; border-radius: 6px;
+  font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  transition: all 0.25s; margin-top: 8px;
+  box-shadow: 0 4px 16px rgba(201,169,110,0.3);
+}
+.modal-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+@media(max-width:600px) {
+  .modal-body { padding: 24px 20px; }
+  .modal-header { padding: 28px 20px 20px; }
+  .temas-grid { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -236,7 +316,7 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
       <p class="section-sub">Elegí el área que mejor se adapte a tus objetivos y comenzá a desarrollar habilidades con alta demanda en el mercado laboral.</p>
     </div>
     <div class="areas-grid">
-      <div class="area-card reveal"><div class="area-icon">📋</div><h3>Administrativa</h3><p>Capacitación para tareas administrativas, gestión documental y organización empresarial.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
+      <div class="area-card reveal"><div class="area-icon">📋</div><h3>Administrativa</h3><p>Capacitación para tareas administrativas, gestión documental y organización empresarial.</p><button onclick="abrirModal('modalAdministrativa')" class="btn-card">Ver cursos</button></div>
       <div class="area-card reveal"><div class="area-icon">🗂️</div><h3>Gestoría y Secretariados</h3><p>Formación práctica para desempeñarse en gestorías, oficinas y áreas administrativas.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
       <div class="area-card reveal"><div class="area-icon">✨</div><h3>Belleza</h3><p>Cursos orientados al cuidado personal, estética y servicios de belleza.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
       <div class="area-card reveal"><div class="area-icon">📚</div><h3>Educación</h3><p>Capacitación para el desarrollo de habilidades educativas y de acompañamiento.</p><a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20" target="_blank" class="btn-card">Ver cursos</a></div>
@@ -341,6 +421,84 @@ reveals.forEach(el => observer.observe(el));
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').style.background = window.scrollY > 50 ? 'rgba(58,0,12,0.98)' : 'rgba(58,0,12,0.92)';
 });
+
+function abrirModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function cerrarModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Cerrar al hacer clic fuera
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === this) cerrarModal(this.id);
+  });
+});
+// Cerrar con ESC
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => cerrarModal(m.id));
+});
+
 </script>
+
+<!-- MODAL AUXILIAR CONTABLE -->
+<div class="modal-overlay" id="modalAdministrativa">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('modalAdministrativa')">✕</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Auxiliar Contable, Facturación Electrónica, Excel y AFIP</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+
+      <div class="modal-section">
+        <div class="modal-section-title">Sobre el curso</div>
+        <p>Como auxiliar contable aprenderás las bases de la contabilidad aplicadas en una empresa, así como las distintas actividades que podrás llevar a cabo al desempeñarte en este puesto. Esta labor es muy importante ya que la información proporcionada por el área en la que te desempeñarás es indispensable para la toma de decisiones en cualquier empresa.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">Temas a desarrollar</div>
+        <div class="temas-grid">
+          <div class="tema-item">Importancia de la contabilidad en las empresas</div>
+          <div class="tema-item">Características de la información financiera</div>
+          <div class="tema-item">Principios fundamentales de la contabilidad</div>
+          <div class="tema-item">Código de ética profesional</div>
+          <div class="tema-item">La contabilidad en la empresa</div>
+          <div class="tema-item">Patrimonio y clasificación de cuentas patrimoniales</div>
+          <div class="tema-item">Cuenta T</div>
+          <div class="tema-item">Sistema de partida doble</div>
+          <div class="tema-item">Impuesto al Valor Agregado (IVA)</div>
+          <div class="tema-item">Libro diario y mayor · Registro de operaciones</div>
+          <div class="tema-item">Registro de ventas, compras y gastos</div>
+          <div class="tema-item">Inventario y clasificación de inventarios</div>
+          <div class="tema-item">Ingresos y egresos · Amortización</div>
+          <div class="tema-item">Sueldos y salarios · Cuenta caja</div>
+          <div class="tema-item">Control de ingresos y egresos</div>
+          <div class="tema-item">Soportes contables · Archivo contable</div>
+          <div class="tema-item">Hojas de cálculo (Excel)</div>
+          <div class="tema-item">Facturación electrónica y AFIP</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está cargado en la plataforma. No hay clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Por dudas o consultas, tenés un número de WhatsApp disponible para consultar.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia bancaria.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar la inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Auxiliar%20Contable%2C%20Facturaci%C3%B3n%20Electr%C3%B3nica%2C%20Excel%20y%20AFIP" target="_blank" class="modal-cta">Quiero inscribirme</a>
+
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
