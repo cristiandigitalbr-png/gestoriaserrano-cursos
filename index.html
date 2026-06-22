@@ -179,7 +179,9 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
 .footer-inner, .footer-brand, .footer-col, .footer-bottom, .footer-socials, .footer-logo, .footer-contact, .footer-contact-item { all: unset; }
 
 
-/* MODAL */
+
+
+/* MODAL BASE */
 .modal-overlay {
   display: none; position: fixed; inset: 0; z-index: 999;
   background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
@@ -188,7 +190,7 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
 .modal-overlay.open { display: flex; }
 .modal-box {
   background: var(--cream); border-radius: 10px;
-  max-width: 680px; width: 100%;
+  max-width: 720px; width: 100%;
   max-height: 90vh; overflow-y: auto;
   position: relative;
   box-shadow: 0 32px 80px rgba(0,0,0,0.4);
@@ -198,17 +200,12 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
   padding: 36px 36px 28px; border-radius: 10px 10px 0 0;
   position: sticky; top: 0; z-index: 2;
 }
-.modal-badge {
-  display: inline-block; background: var(--gold); color: var(--bordo-deep);
-  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
-}
 .modal-header h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(20px, 3vw, 28px); font-weight: 700;
-  color: var(--white); line-height: 1.25; margin-bottom: 8px;
+  color: var(--white); line-height: 1.25; margin-bottom: 6px;
 }
-.modal-header p { font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 1px; text-transform: uppercase; }
+.modal-header p { font-size: 13px; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; }
 .modal-close {
   position: absolute; top: 16px; right: 16px;
   background: rgba(255,255,255,0.15); border: none; cursor: pointer;
@@ -217,7 +214,53 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
   color: var(--white); font-size: 18px; transition: background 0.2s;
 }
 .modal-close:hover { background: rgba(255,255,255,0.3); }
+.modal-back {
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,0.7); font-size: 13px; letter-spacing: 1px;
+  display: flex; align-items: center; gap: 6px; margin-bottom: 14px;
+  padding: 0; text-transform: uppercase; transition: color 0.2s;
+}
+.modal-back:hover { color: var(--gold); }
 .modal-body { padding: 32px 36px; }
+
+/* CURSOS GRID (nivel 1) */
+.cursos-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px; padding: 28px 36px;
+}
+.curso-preview-card {
+  background: var(--white); border-radius: 8px; padding: 24px 20px;
+  border: 1px solid rgba(122,0,25,0.1);
+  cursor: pointer; transition: all 0.25s;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.curso-preview-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(122,0,25,0.12);
+  border-color: var(--bordo);
+}
+.curso-preview-badge {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--bordo); background: rgba(122,0,25,0.08);
+  padding: 3px 10px; border-radius: 20px; width: fit-content;
+}
+.curso-preview-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 700; color: var(--text-dark); line-height: 1.3;
+}
+.curso-preview-card p { font-size: 13px; color: var(--text-soft); line-height: 1.6; flex: 1; }
+.curso-preview-arrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--bordo); display: flex; align-items: center; gap: 6px; margin-top: 4px;
+}
+
+/* DETALLE CURSO (nivel 2) */
+.modal-badge {
+  display: inline-block; background: var(--gold); color: var(--bordo-deep);
+  font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
+}
 .modal-section { margin-bottom: 28px; }
 .modal-section-title {
   font-family: 'Playfair Display', serif;
@@ -226,9 +269,7 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
   border-bottom: 2px solid rgba(122,0,25,0.12);
 }
 .modal-section p { font-size: 15px; line-height: 1.8; color: var(--text-soft); }
-.temas-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-}
+.temas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .tema-item {
   display: flex; align-items: flex-start; gap: 8px;
   font-size: 13px; line-height: 1.5; color: var(--text-dark);
@@ -253,9 +294,10 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
 }
 .modal-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
 @media(max-width:600px) {
-  .modal-body { padding: 24px 20px; }
+  .modal-body, .cursos-grid { padding: 20px; }
   .modal-header { padding: 28px 20px 20px; }
   .temas-grid { grid-template-columns: 1fr; }
+  .cursos-grid { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -422,6 +464,7 @@ window.addEventListener('scroll', () => {
   document.getElementById('navbar').style.background = window.scrollY > 50 ? 'rgba(58,0,12,0.98)' : 'rgba(58,0,12,0.92)';
 });
 
+
 function abrirModal(id) {
   document.getElementById(id).classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -430,35 +473,84 @@ function cerrarModal(id) {
   document.getElementById(id).classList.remove('open');
   document.body.style.overflow = '';
 }
-// Cerrar al hacer clic fuera
-document.querySelectorAll('.modal-overlay').forEach(overlay => {
-  overlay.addEventListener('click', function(e) {
-    if (e.target === this) cerrarModal(this.id);
+function abrirDetalle(detalleId) {
+  // Cerrar todos los modales de nivel 1 abiertos
+  document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
+  document.getElementById(detalleId).classList.add('open');
+}
+function volverLista(detalleId, listaId) {
+  document.getElementById(detalleId).classList.remove('open');
+  document.getElementById(listaId).classList.add('open');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === this) {
+        cerrarModal(this.id);
+        document.body.style.overflow = '';
+      }
+    });
   });
-});
-// Cerrar con ESC
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => cerrarModal(m.id));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => {
+        cerrarModal(m.id);
+      });
+    }
+  });
 });
 
 </script>
 
-<!-- MODAL AUXILIAR CONTABLE -->
+
+<!-- MODAL NIVEL 1: LISTADO CURSOS ADMINISTRATIVA -->
 <div class="modal-overlay" id="modalAdministrativa">
   <div class="modal-box">
     <div class="modal-header">
       <button class="modal-close" onclick="cerrarModal('modalAdministrativa')">✕</button>
+      <h2>Área Administrativa</h2>
+      <p>Gestoría Serrano · Seleccioná un curso</p>
+    </div>
+    <div class="cursos-grid">
+      <!-- CURSO 1 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleContable')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Auxiliar Contable, Facturación Electrónica, Excel y AFIP</h3>
+        <p>Aprendé las bases de la contabilidad aplicada en empresa, facturación electrónica y manejo de AFIP.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- CURSO 2 -->
+      <div class="curso-preview-card" onclick="abrirDetalle('detalleExcel')">
+        <div class="curso-preview-badge">100% Online</div>
+        <h3>Excel</h3>
+        <p>Dominá Microsoft Excel desde cero: funciones, tablas dinámicas, gráficos y más. Ideal para administración, contabilidad y ventas.</p>
+        <div class="curso-preview-arrow">Ver detalle →</div>
+      </div>
+      <!-- PRÓXIMOS CURSOS (placeholder) -->
+      <div class="curso-preview-card" style="opacity:0.5;cursor:default;pointer-events:none;">
+        <div class="curso-preview-badge">Próximamente</div>
+        <h3>Nuevo curso</h3>
+        <p>Próximamente habrá más cursos disponibles en esta área.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NIVEL 2: DETALLE AUXILIAR CONTABLE -->
+<div class="modal-overlay" id="detalleContable">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleContable')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleContable','modalAdministrativa')">← Volver a Administrativa</button>
       <div class="modal-badge">100% Online · Certificado Internacional</div>
       <h2>Auxiliar Contable, Facturación Electrónica, Excel y AFIP</h2>
       <p>Área Administrativa · Gestoría Serrano</p>
     </div>
     <div class="modal-body">
-
       <div class="modal-section">
         <div class="modal-section-title">Sobre el curso</div>
-        <p>Como auxiliar contable aprenderás las bases de la contabilidad aplicadas en una empresa, así como las distintas actividades que podrás llevar a cabo al desempeñarte en este puesto. Esta labor es muy importante ya que la información proporcionada por el área en la que te desempeñarás es indispensable para la toma de decisiones en cualquier empresa.</p>
+        <p>Como auxiliar contable aprenderás las bases de la contabilidad aplicadas en una empresa, así como las distintas actividades que podrás llevar a cabo al desempeñarte en este puesto. Esta labor es muy importante ya que la información proporcionada por el área es indispensable para la toma de decisiones en cualquier empresa.</p>
       </div>
-
       <div class="modal-section">
         <div class="modal-section-title">Temas a desarrollar</div>
         <div class="temas-grid">
@@ -482,20 +574,61 @@ document.addEventListener('keydown', e => {
           <div class="tema-item">Facturación electrónica y AFIP</div>
         </div>
       </div>
-
       <div class="modal-section">
         <div class="modal-section-title">Información importante</div>
         <div class="info-items">
-          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está cargado en la plataforma. No hay clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
           <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
-          <div class="info-item"><span class="info-item-icon">💬</span><span>Por dudas o consultas, tenés un número de WhatsApp disponible para consultar.</span></div>
-          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia bancaria.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
-          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar la inscripción + primera cuota.</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.<br>Cuotas del 1 al 10 de cada mes (fuera de fecha tiene recargo).</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
         </div>
       </div>
-
       <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Auxiliar%20Contable%2C%20Facturaci%C3%B3n%20Electr%C3%B3nica%2C%20Excel%20y%20AFIP" target="_blank" class="modal-cta">Quiero inscribirme</a>
+    </div>
+  </div>
+</div>
 
+
+<!-- MODAL NIVEL 2: DETALLE EXCEL -->
+<div class="modal-overlay" id="detalleExcel">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="cerrarModal('detalleExcel')">✕</button>
+      <button class="modal-back" onclick="volverLista('detalleExcel','modalAdministrativa')">← Volver a Administrativa</button>
+      <div class="modal-badge">100% Online · Certificado Internacional</div>
+      <h2>Excel</h2>
+      <p>Área Administrativa · Gestoría Serrano</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-section-title">¿A quién está dirigido?</div>
+        <p>Este curso está dirigido a personas que se desempeñen como asistente administrativo, auxiliar contable, analista de negocios, y otras áreas afines a la administración, contabilidad, marketing y ventas. También para quienes quieran aprender desde cero.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contenido del curso</div>
+        <div class="temas-grid">
+          <div class="tema-item">Nociones básicas de Microsoft Excel</div>
+          <div class="tema-item">Funcionalidades de Microsoft Excel</div>
+          <div class="tema-item">Funciones matemáticas de Excel</div>
+          <div class="tema-item">Tablas y gráficos dinámicos</div>
+          <div class="tema-item">Operadores lógicos y condicionales</div>
+          <div class="tema-item">Funciones de búsqueda y referencias</div>
+          <div class="tema-item">Gráficas de líneas, circulares y barras</div>
+          <div class="tema-item">Automatización de trabajo con tablas</div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Información importante</div>
+        <div class="info-items">
+          <div class="info-item"><span class="info-item-icon">🖥️</span><span><strong>Cursado virtual:</strong> Todo el contenido está en la plataforma. Sin clases en vivo — ingresás en cualquier horario.</span></div>
+          <div class="info-item"><span class="info-item-icon">🏆</span><span><strong>Certificado Internacional</strong> avalado por Educar (Standard Lift SA).</span></div>
+          <div class="info-item"><span class="info-item-icon">💬</span><span>Tenés un número de WhatsApp disponible para consultas durante el cursado.</span></div>
+          <div class="info-item"><span class="info-item-icon">💳</span><span><strong>Pago contado:</strong> 10% de descuento por transferencia.<br><strong>Pago mensual:</strong> Transferencia sin recargo · Pago Fácil o tarjeta con 10% de recargo.</span></div>
+          <div class="info-item"><span class="info-item-icon">📌</span><span><strong>Para confirmar inscripción</strong> se debe abonar inscripción + primera cuota.</span></div>
+        </div>
+      </div>
+      <a href="https://wa.me/5493385432044?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20curso%3A%20Excel" target="_blank" class="modal-cta">Quiero inscribirme</a>
     </div>
   </div>
 </div>
