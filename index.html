@@ -444,9 +444,41 @@ footer { background: var(--bordo-deep); border-top: 1px solid rgba(201,169,110,0
     </div>
   </div>
   <div class="footer-copy">
-    <p>© 2026 Gestoría Serrano Cursos. Todos los derechos reservados.</p>
+    <p>© 2026 Gestoría Serrano Cursos. Todos los derechos reservados. · <a href="#" onclick="document.getElementById('modalPrivacidad').style.display='flex';return false;" style="color:rgba(255,255,255,0.45);text-decoration:underline;cursor:pointer;">Política de Privacidad</a></p>
   </div>
 </footer>
+
+<!-- MODAL POLÍTICA DE PRIVACIDAD -->
+<div id="modalPrivacidad" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:12px;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:40px;position:relative;">
+    <button onclick="document.getElementById('modalPrivacidad').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:22px;cursor:pointer;color:#555;">✕</button>
+    <h2 style="font-family:'Playfair Display',serif;font-size:24px;color:#5a1a2a;margin-bottom:8px;">Política de Privacidad</h2>
+    <p style="font-size:13px;color:#888;margin-bottom:24px;">Gestoría Serrano · Última actualización: 2026</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">1. Responsable del tratamiento de datos</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Gestoría Serrano, institución de formación profesional con sede en Serrano, Córdoba, Argentina, es responsable del tratamiento de los datos personales recopilados a través de este sitio web. Para consultas podés comunicarte por WhatsApp al <strong>+54 9 338 543-2044</strong>.</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">2. Datos que recopilamos</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Recopilamos los datos que vos mismo/a nos proporcionás al completar el formulario de contacto o al comunicarte por WhatsApp: nombre, número de teléfono y consultas relacionadas con nuestros cursos.</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">3. Finalidad del uso de los datos</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Los datos recopilados se utilizan exclusivamente para responder consultas sobre nuestros cursos, brindar información sobre inscripciones y condiciones de pago, y dar seguimiento a tu proceso de inscripción.</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">4. Compartición de datos con terceros</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Gestoría Serrano no vende, cede ni transfiere tus datos personales a terceros, salvo que exista una obligación legal que lo requiera.</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">5. Protección de los datos</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Tratamos tus datos con confidencialidad y adoptamos medidas razonables para protegerlos de accesos no autorizados, pérdida o uso indebido.</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">6. Tus derechos</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:20px;">Conforme a la Ley 25.326 de Protección de Datos Personales de la República Argentina, tenés derecho a acceder, rectificar o solicitar la eliminación de tus datos personales en cualquier momento. Para ejercer estos derechos, comunicate con nosotros por WhatsApp al <strong>+54 9 338 543-2044</strong>.</p>
+
+    <h3 style="font-size:15px;font-weight:700;color:#333;margin-bottom:8px;">7. Modificaciones</h3>
+    <p style="font-size:14px;color:#555;line-height:1.7;margin-bottom:24px;">Nos reservamos el derecho de actualizar esta política en cualquier momento. Cualquier cambio será publicado en esta misma página.</p>
+
+    <button onclick="document.getElementById('modalPrivacidad').style.display='none'" style="background:#5a1a2a;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;">Cerrar</button>
+  </div>
+</div>
 
 <script>
 const hamburger = document.getElementById('hamburger');
